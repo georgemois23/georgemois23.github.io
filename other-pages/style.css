@@ -109,6 +109,41 @@ body {
         height: 100px;
     }
 
+    /* /* .container {
+    position: relative; /* Make the container a positioning context */
+
+/*  
+.hidden {
+    display: none; /* Initially hide the element */
+    /* position: absolute; Position the element absolutely */
+    /* top: 100%; Position it below the trigger */
+    /* left: 0; Align it with the left side of the container */
+/* 
+
+.trigger:hover + .hidden,
+.hidden:hover {
+    display: block; /* Make the .hidden element visible when hovered over *//* 
+} *//* 
+.container {
+    position: relative; /* Make the container a positioning context *//* 
+} */
+
+.hidden {
+    display: none; /* Initially hide the element */
+    text-decoration: none;
+    color: black;
+    position: absolute; /* Position the element absolutely */
+    top: 0; /* Align it with the top of the container */
+    left: 500%; /* Position it to the right of the trigger */
+    margin-left: 10px; /* Add some spacing */
+}
+
+.trigger:hover + .hidden,
+.hidden:hover {
+    display: block; /* Make the .hidden element visible when hovered over */
+}
+
+
         #contactt{
             margin: 50px;
             text-align: center;
@@ -118,7 +153,6 @@ body {
             text-align: center;
         }
     html{
-        height: 100%;
       font-family: "Advent Pro", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
