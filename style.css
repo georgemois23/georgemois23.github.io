@@ -1,3 +1,119 @@
-html{
+/* html{
     background-color: lightcyan;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left:10px;
+    margin-right: 15px;
 }
+
+nav {
+  background-color: rgb(255, 255, 255);
+  /* background-color: #4b6cb7; */
+  text-align: center;
+  /* position: fixed; */
+  /* color: darkmagenta; */
+  color: rgb(126, 52, 126);
+  top:10px;
+width:60%;
+z-index: 1;
+min-height: 50px;
+margin: 0 auto;
+padding-top: 10px;
+border-radius: 15px;
+border-style:solid;
+border-color: rgb(93, 23, 93);
+overflow: auto; /* Prevent content overflow */
+  white-space: nowrap;
+}
+
+.hh1{
+    /* padding-top: 20px;
+    padding-left: 10px; */
+    /* float: left; */
+    display: inline-block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:space-evenly; /* Center the items horizontally */
+  color: darkmagenta;
+}
+
+li {
+  margin: 0 15px; /* Adjust the margin for spacing */
+}
+
+ul > li:hover {
+  
+  /* color: rgb(115, 0, 115); */
+}
+
+ul > li {
+  font-weight: 600;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: xx-large;
+  color: darkmagenta;
+}
+
+ul> li a:hover{
+  font-weight:800;
+  color: rgb(102, 0, 102);
+
+}
+
+
+  main{
+    /* padding: auto; */
+    
+    background-size:auto;
+    width: 100%; 
+    height: 100%;
+  }
+
+  .advent-pro{
+    font-family: "Advent Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+  }
+  
+  html{
+    font-family: "Advent Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+    background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
+    
+  }
+  
+
+    img{
+    height: 100px;
+    width: 400px;
+    position: relative;
+    margin: 20px;
+    /* z-index:0; */
+  }
+
+  video{
+    top: 0;
+    left: 0;
+    padding:10px;
+  } 
+
+  
+
