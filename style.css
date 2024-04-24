@@ -48,6 +48,7 @@ body {
 
 .typing-text {
   border-right: 5px solid;
+  /* df */
     white-space: nowrap; /*Keep text on one line*/
     flex-direction: column;
     width: 100%;
