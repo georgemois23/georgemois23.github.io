@@ -1,0 +1,198 @@
+/* html{
+    background-color: lightcyan;
+} */
+
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left:10px;
+      margin-right: 15px;
+  }
+  
+  nav {
+    background-color: rgb(255, 255, 255);
+    /* background-color: #4b6cb7; */
+    text-align: center;
+    /* position: fixed; */
+    /* color: darkmagenta; */
+    color: rgb(126, 52, 126);
+    top:10px;
+  width:60%;
+  z-index: 1;
+  min-height: 50px;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-radius: 15px;
+  border-style:solid;
+  border-color: rgb(93, 23, 93);
+  overflow: auto; /* Prevent content overflow */
+    white-space: nowrap;
+  }
+
+  
+  .hh1{
+      /* padding-top: 20px;
+      padding-left: 10px; */
+      /* float: left; */
+      display: inline-block;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-around; /* Center the items horizontally */
+    color: darkmagenta;
+  }
+  
+  li {
+    margin: 0 15px; /* Adjust the margin for spacing */
+  }
+  
+  ul > li:hover {
+    
+    /* color: rgb(115, 0, 115); */
+  }
+  
+  ul > li {
+    font-weight: 600;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    font-size: xx-large;
+    color: darkmagenta;
+  }
+
+  .typing-text {
+    position: relative;
+    white-space: nowrap; /* Keep text on one line */
+    margin: 0 auto; /* Center text */
+    overflow: hidden; /* Hide overflowing text */
+    animation-name: typing;
+    animation-duration: 7s;
+}
+
+
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+    from { width: 0; left: 0; } /* Start with 0 width and left position at 0 */
+    to { width: 100%; left: 0; } 
+}
+  
+    ul> li a:hover{
+        font-weight:800;
+        color: rgb(102, 0, 102);
+      
+      }
+  
+  
+    main{
+      /* padding: auto; */
+      
+      background-size:auto;
+      width: 100%; 
+      height: 100%;
+    }
+  
+    .advent-pro{
+      font-family: "Advent Pro", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:"wdth" 100;
+    }
+    
+    #git{
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    a[href="https://www.github.com/georgemois23"] #imgg {
+        margin: 0 auto;
+    }
+    a[href="https://www.github.com/georgemois23"]  {
+        display: block;
+        text-align: center;
+        height: 100px;
+    }
+
+    /* /* .container {
+    position: relative; /* Make the container a positioning context */
+
+/*  
+.hidden {
+    display: none; /* Initially hide the element */
+    /* position: absolute; Position the element absolutely */
+    /* top: 100%; Position it below the trigger */
+    /* left: 0; Align it with the left side of the container */
+/* 
+
+.trigger:hover + .hidden,
+.hidden:hover {
+    display: block; /* Make the .hidden element visible when hovered over *//* 
+} *//* 
+.container {
+    position: relative; /* Make the container a positioning context *//* 
+} */
+
+.hidden {
+    display: none; /* Initially hide the element */
+    text-decoration: none;
+    color: black;
+    position: absolute; /* Position the element absolutely */
+    top: 0; /* Align it with the top of the container */
+    left: 500%; /* Position it to the right of the trigger */
+    margin-left: 10px; /* Add some spacing */
+}
+
+.trigger:hover + .hidden,
+.hidden:hover {
+    display: block; /* Make the .hidden element visible when hovered over */
+}
+
+
+        #contactt{
+            margin: 50px;
+            text-align: center;
+        }
+        form{
+            padding: 50px;
+            text-align: center;
+        }
+
+        html{
+            font-family: "Advent Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 22px;
+            /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+            /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
+             */
+             background: linear-gradient(291deg, rgba(0,0,128,1) 0%, rgba(63,9,121,1) 46%, rgba(0,212,255,1) 100%);
+          }
+    
+  
+      img{
+      height: 100px;
+      width: 400px;
+      position: relative;
+      margin: 20px;
+      /* z-index:0; */
+    }
+  
+    video{
+      top: 0;
+      left: 0;
+      padding:10px;
+    } 
+  
+    
+  
+  
