@@ -11,55 +11,157 @@ body {
   margin-left:10px;
     margin-right: 15px;
 }
-
-nav {
-  background-color: rgb(255, 255, 255);
-  /* background-color: #4b6cb7; */
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  border-style:solid;
+  border-color: rgb(93, 23, 93);
+  display: flex;
+  justify-content:space-around;
   text-align: center;
-  /* position: fixed; */
-  /* color: darkmagenta; */
-  color: rgb(126, 52, 126);
-  top:10px;
-width:60%;
-z-index: 1;
-min-height: 50px;
-margin: 0 auto;
-padding-top: 10px;
-border-radius: 15px;
-border-style:solid;
-border-color: rgb(93, 23, 93);
-overflow: auto; /* Prevent content overflow */
   white-space: nowrap;
+  width: 60%;
 }
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  top:10px;
+  width:60%;
+  z-index: 1;
+  /* min-height: 50px; */
+  margin: 0 15px;
+  padding-top: 10px;
+  color: rgb(126, 52, 126);
+  font-weight: 600;
+  line-height: normal;
+  font-size: xx-large;
+}
+
+.navigation a:hover {
+  font-weight:800;
+        color: rgb(102, 0, 102);
+}
+
 
 .typing-text {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  overflow: hidden;
-  /*border-right: .15em solid orange;  Cursor style */
-  white-space: nowrap; /* Keep text on one line */
-  margin: 0 auto; /* Center text */
-  animation: typing 2s steps(40) ;
-  text-align: center;
+  border-right: 5px solid;
+    white-space: nowrap; /*Keep text on one line*/
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden; /* Hide overflowing text */
+    animation: 
+    typing 7s steps(86),
+    cursor1 7s step-end  alternate;
 }
+
+@keyframes cursor1{
+  40% {border-color: transparent;}
+}
+
+
+@media all and (max-width:375px) {
+  .navigation {
+    width: fit-content;
+    justify-content:center;
+    /* font-size: small; */
+    
+     /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;  */
+  }}
+@media all and (max-width:445px) {
+  .navigation {
+    width: fit-content;
+    justify-content:center;
+    /* font-size: small; */
+    
+     /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;  */
+  }}
+@media all and (max-width: 445px) {
+  .navigation a {
+    text-align:center;
+    padding: 10px;
+    font-size: smaller;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 445px) {
+  img,video {
+    width: 100%;
+    height: 100%;
+    padding-right:20px;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 375px) {
+  .navigation a {
+    text-align:center;
+    /* padding: 10px; */
+    font-size: small;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 1600px) {
+  .navigation  {
+    width: fit-content;
+    justify-content:left;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+
 
 /* Keyframes for the typing animation */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }}
+    from { width: 0} 
+}
+/* width */
+::-webkit-scrollbar {
+  width: 100%;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
 .hh1{
     /* padding-top: 20px;
     padding-left: 10px; */
     /* float: left; */
     display: inline-block;
 }
-ul {
+.navigation a {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content:space-evenly; /* Center the items horizontally */
+  justify-content:space-around; /* Center the items horizontally */
   color: darkmagenta;
 }
 
@@ -67,7 +169,7 @@ li {
   margin: 0 15px; /* Adjust the margin for spacing */
 }
 
-ul > li:hover {
+.navigation a:hover {
   
   /* color: rgb(115, 0, 115); */
 }
@@ -82,7 +184,7 @@ ul li a {
   color: darkmagenta;
 }
 
-ul> li a:hover{
+.navigation a:hover{
   font-weight:800;
   color: rgb(102, 0, 102);
 
@@ -119,8 +221,8 @@ ul> li a:hover{
   
 
     img{
-    height: 100px;
-    width: 400px;
+    height: 50px;
+    width: 200px;
     position: relative;
     margin: 20px;
     /* z-index:0; */
