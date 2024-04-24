@@ -200,6 +200,8 @@ ul li a {
     height: 100%;
   }
 
+ 
+
   .advent-pro{
     font-family: "Advent Pro", sans-serif;
     font-optical-sizing: auto;
@@ -214,6 +216,9 @@ ul li a {
     font-weight: 400;
     font-style: normal;
     font-size: 22px;
+    background-size:auto;
+    width: 100%; 
+    height: 100%;
     /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
     /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
      */

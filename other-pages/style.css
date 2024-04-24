@@ -24,6 +24,10 @@ a[href="https://www.github.com/georgemois23"]  {
     text-align: center;
     height: 100px;
 }
+
+.trigger{
+    text-align: center;
+}
 .hidden {
     display: none; /* Initially hide the element */
     text-decoration: none;
