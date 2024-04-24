@@ -2,7 +2,7 @@
     background-color: lightcyan;
 } */
 
-body {
+body{
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -71,6 +71,22 @@ body {
     font-size: xx-large;
     color: darkmagenta;
   }
+
+  .typing-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    overflow: hidden;
+    /*border-right: .15em solid orange;  Cursor style */
+    white-space: nowrap; /* Keep text on one line */
+    margin: 0 auto; /* Center text */
+    animation: typing 2s steps(40) ;
+    text-align: center;
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }}
   
   ul> li a:hover{
     font-weight:800;
@@ -152,12 +168,14 @@ body {
             padding: 50px;
             text-align: center;
         }
+
     html{
       font-family: "Advent Pro", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
       font-size: 22px;
+      height: 100%;
       /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
       background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
       
