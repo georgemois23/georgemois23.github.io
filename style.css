@@ -30,7 +30,8 @@ body {
 .navigation {
   list-style: none;
   margin: 0 auto;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
+     background:  antiquewhite;
   border-radius: 15px;
   border-style:solid;
   border-color: rgb(93, 23, 93);
