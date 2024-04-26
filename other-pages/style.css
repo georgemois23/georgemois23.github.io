@@ -17,6 +17,9 @@ body {
     text-align: center;
 }
 
+.txt-color{
+  color:  antiquewhite;
+}
 a[href="https://www.github.com/georgemois23"] #imgg {
     margin: 0 auto;
 }
