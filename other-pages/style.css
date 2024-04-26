@@ -24,6 +24,15 @@ a[href="https://www.github.com/georgemois23"]  {
     text-align: center;
     height: 100px;
 }
+.gloria-hallelujah-regular {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Miracode'; /* Name your font family */
+  src: url("/other-pages/Miracode.ttf");}
 
 .trigger{
     text-align: center;
@@ -53,40 +62,46 @@ a[href="https://www.github.com/georgemois23"]  {
             text-align: center;
         }
 
-  .navigation {
-    list-style: none;
-    margin: 0 auto;
-    background: rgb(255, 255, 255);
-    border-radius: 15px;
-    border-style:solid;
-    border-color: rgb(93, 23, 93);
-    display: flex;
-    justify-content:space-around;
-    text-align: center;
-    white-space: nowrap;
-    width: 60%;
-  }
-  
-  .navigation a {
-    text-decoration: none;
-    display: block;
-    top:10px;
-    width:60%;
-    z-index: 1;
-    /* min-height: 50px; */
-    margin: 0 15px;
-    padding-top: 10px;
-    color: rgb(126, 52, 126);
-    font-weight: 600;
-    line-height: normal;
-    font-size: xx-large;
-  }
-  
-  .navigation a:hover {
-    font-weight:800;
-          color: rgb(102, 0, 102);
-  }
-  
+  /* navigation start */
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  border-style:solid;
+  border-color: rgb(93, 23, 93);
+  display: flex;
+  justify-content:space-between;
+  text-align: center;
+  white-space: nowrap;
+  width: 60%;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  top:10px;
+  width:60%;
+  z-index: 1;
+  font-family: "Gloria Hallelujah", cursive;
+  /* min-height: 50px; */
+  margin: 0 15px;
+  /* padding-top: 10px; */
+  color: darkmagenta; 
+  font-weight: 600;
+  line-height: normal;
+  font-size: xx-large;
+}
+
+.navigation a:hover {
+  font-weight:800;
+        color: rgb(113, 1, 113);
+        text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+}
+/* navigation end */
   
   .typing-text {
     border-right: 5px solid;
@@ -105,70 +120,145 @@ a[href="https://www.github.com/georgemois23"]  {
   }
   
   
-  @media all and (max-width:375px) {
-    .navigation {
-      width: fit-content;
-      justify-content:center;
-      /* font-size: small; */
-      
-       /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0;  */
-    }}
-  @media all and (max-width:445px) {
-    .navigation {
-      width: fit-content;
-      justify-content:center;
-      /* font-size: small; */
-      
-       /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0;  */
-    }}
-  @media all and (max-width: 445px) {
-    .navigation a {
-      text-align:center;
-      padding: 10px;
-      font-size: smaller;
-      /* font-size: small; */
-      
-        /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0; */
-    }}
-  @media all and (max-width: 445px) {
-    img,video {
-      width: 100%;
-      height: 100%;
-      padding-right:20px;
-      /* font-size: small; */
-      
-        /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0; */
-    }}
-  @media all and (max-width: 375px) {
-    .navigation a {
-      text-align:center;
-      /* padding: 10px; */
-      font-size: small;
-      /* font-size: small; */
-      
-        /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0; */
-    }}
-  @media all and (max-width: 1600px) {
-    .navigation  {
-      width: fit-content;
-      justify-content:left;
-      /* font-size: small; */
-      
-        /* flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0; */
-    }}
-  
+/* zoom start */
+@media all and (max-width:575px) {
+  .navigation {
+    justify-content:center;
+    
+    /* font-size: small; */
+    
+     /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;  */
+  }}
+@media all and (max-width:575px) {
+  .navigation a {
+    justify-content:center;
+    
+    font-size: smaller;
+    
+     /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;  */
+  }}
+@media all and (max-width:445px) {
+  .navigation {
+    /* width: 10%; */
+    justify-content:center;
+    /* font-size: small; */
+    
+     /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;  */
+  }}
+@media all and (max-width: 445px) {
+  .navigation a {
+    text-align:center;
+    /* padding: 10px; */
+    font-size: smaller;
+    /* background-color: #000; */
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 445px) {
+  .navigation a:hover {
+    text-shadow: -0.5px 0.5px 0 #000,
+             0.5px 0.5px 0 #000,
+             0.5px -0.5px 0 #000,
+             -0.5px -0.5px 0 #000;
+    /* background-color: #000; */
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 445px) {
+  img,video {
+    width: 100%;
+    height: 100%;
+    padding-right:20px;
+    
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 375px) {
+  .navigation a {
+    text-align:center;
+    justify-content: space-around;
+    
+    /* background-color: #000; */
+    /* padding: 10px; */
+    font-size: smaller;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 310px) {
+  .navigation a {
+    text-align:center;
+    justify-content: space-around;
+    
+    /* background-color: #000; */
+    /* padding: 10px; */
+    /* font-size: smaller; */
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+@media all and (max-width: 410px) {
+  .navigation  {
+    text-align:center;
+    justify-content: space-around;
+    
+    /* background-color: #000; */
+    /* padding: 10px; */
+    font-size: smaller;
+    /* font-size: small; */
+    
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;
+  }}
+@media all and (max-width: 375px) {
+  .navigation a:hover {
+    text-align:center;
+    justify-content: space-around;
+    text-shadow: -0.5px 0.5px 0 #000,
+             0.5px 0.5px 0 #000,
+             0.5px -0.5px 0 #000,
+             -0.5px -0.5px 0 #000;
+    /* background-color: #000; */
+    /* padding: 10px; */
+    /* font-size: smaller; */
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+
+@media all and (max-width: 1600px) {
+  .navigation  {
+    width: fit-content;
+    justify-content:center;
+    /* font-size: small; */
+    
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; */
+  }}
+/* zoom end */
   
   /* Keyframes for the typing animation */
   @keyframes typing {
@@ -199,39 +289,7 @@ a[href="https://www.github.com/georgemois23"]  {
       /* float: left; */
       display: inline-block;
   }
-  .navigation a {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content:space-around; /* Center the items horizontally */
-    color: darkmagenta;
-  }
   
-  li {
-    margin: 0 15px; /* Adjust the margin for spacing */
-  }
-  
-  .navigation a:hover {
-    
-    /* color: rgb(115, 0, 115); */
-  }
-  
-  ul > li {
-    font-weight: 600;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    font-size: xx-large;
-    color: darkmagenta;
-  }
-  
-  .navigation a:hover{
-    font-weight:800;
-    color: rgb(102, 0, 102);
-  
-  }
   
   
     main{
@@ -260,9 +318,10 @@ a[href="https://www.github.com/georgemois23"]  {
       /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
        */
        /* background: linear-gradient(291deg, rgba(0,0,128,1) 0%, rgba(63,9,121,1) 46%, rgba(0,212,255,1) 100%); */
-       --tw-bg-opacity: 1;
-       background-color: rgb(43 43 43 / var(--tw-bg-opacity));
-
+       /* --tw-bg-opacity: 1;
+       background-color: rgb(43 43 43 / var(--tw-bg-opacity)); */
+       background: linear-gradient(123deg, rgba(0,0,128,1) 0%, rgba(154,8,161,1) 46%, rgba(0,212,255,1) 100%);
+      height: 100%;
 
     }
     
