@@ -248,12 +248,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
-.hh1{
+.hh1, .name{
     /* padding-top: 20px;
     padding-left: 10px; */
     /* float: left; */
     display: inline-block;
+    color: antiquewhite;
 }
+
+
 
 
 
@@ -288,9 +291,13 @@ body {
     /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
      */
      /* background: linear-gradient(291deg, rgba(0,0,128,1) 0%, rgba(63,9,121,1) 46%, rgba(0,212,255,1) 100%); */
-     background: linear-gradient(123deg, rgba(0,0,128,1) 0%, rgba(154,8,161,1) 46%, rgba(0,212,255,1) 100%);
+     /* background: linear-gradient(123deg, rgba(0,0,128,1) 0%, rgba(154,8,161,1) 46%, rgba(0,212,255,1) 100%); */
      /* --tw-bg-opacity: 1;
      background-color: rgb(236 225 213 / var(--tw-bg-opacity)); */
+     background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   
 
