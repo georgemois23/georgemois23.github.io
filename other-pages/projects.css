@@ -1,0 +1,119 @@
+/* html{
+    background: rgb(0,0,128);
+background: linear-gradient(123deg, rgba(0,0,128,0.8996848739495799) 13%, rgba(154,8,161,1) 63%, rgba(0,212,255,1) 100%);
+height: 100%;
+} */
+
+@media all and (max-width:575px) {
+  .navigation {
+     flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0; 
+  }}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left:10px;
+    margin-right: 15px;
+}
+.active {
+  background-color:white;
+  border-radius: 15px;
+    border-style:solid;
+    /* border-color: rgb(93, 23, 93); */
+    border-bottom: #240b36;
+    border-top: #240b36;
+}
+
+
+html{
+    font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    background-size:auto;
+    width: 100%; 
+    height: 100%;
+    /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+    /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
+     */
+     /* background: linear-gradient(291deg, rgba(0,0,128,1) 0%, rgba(63,9,121,1) 46%, rgba(0,212,255,1) 100%); */
+     /* background: linear-gradient(123deg, rgba(0,0,128,1) 0%, rgba(154,8,161,1) 46%, rgba(0,212,255,1) 100%); */
+     /* --tw-bg-opacity: 1;
+     background-color: rgb(236 225 213 / var(--tw-bg-opacity)); */
+     /* background: #c31432;  fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #240b36, #c31432);  Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to right, #240b36, #c31432); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+background-color: rgba(20, 20, 20);
+
+  }
+
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Advent Pro", sans-serif;
+  }
+  .h{
+    color: white;
+  }
+/* navigation start */
+.navigation {
+  list-style: none;
+  /* margin: 10px 10px; */
+  /* background: rgb(255, 255, 255); */
+     /* background:  antiquewhite; */
+  /* border-radius: 15px; */
+  /* border-style:solid; */
+  /* border-color: rgb(93, 23, 93); */
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 70vw;
+  /* padding-right: 20px; */
+}
+
+
+.navigation a {
+  text-decoration: none;
+  /* display: block; */
+  top:10px;
+  width:60%;
+  z-index: 1;
+  /* min-height: 50px; */
+  margin: 0 15px;
+  /* padding-top: 10px; */
+  color: darkmagenta; 
+  font-weight: 600;
+  line-height: normal;
+  font-size: 50px;
+}
+
+.navigation a:hover {
+
+  font-weight:800;
+  color: darkmagenta; 
+        /* font-weight: bolder; */
+        /* text-shadow: -1px 1px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                -1px -1px 0 #ffffff; */
+}
+/* navigation end */
+
+  .gloria-hallelujah-regular {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Miracode'; /* Name your font family */
+    src: url("/other-pages/Miracode.ttf");}
+  
+
+    
