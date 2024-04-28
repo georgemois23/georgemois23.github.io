@@ -11,7 +11,30 @@
     border-top: #240b36;
 }
 
+ #logo{
+  color: #f1f1f1;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  padding: 10px;
+  text-align: center;
+  top:0px;
+  /* margin: 0 15px; */
+  margin-top: 20px;
+  /* width:60%; */
+  line-height: normal;
+  justify-content: flex-start;
+  
+  
 
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .gloria-hallelujah-regular {
   font-family: "Gloria Hallelujah", cursive;
@@ -79,12 +102,14 @@ header{
   font-family: "Advent Pro", sans-serif;
 }
 
-@media all and (max-width:575px) {
-  .navigation {
+
+@media all and (max-width:675px) {
+  .navigation  {
      flex-direction: column;
       flex-wrap: wrap;
-      padding: 0; 
+      padding: 0;  
   }}
+
 
 
 /* navigation start */
@@ -100,6 +125,7 @@ header{
   justify-content:space-evenly;
   align-items: center;
   width: 70vw;
+  padding-left: 0;
   /* padding-right: 20px; */
 }
 

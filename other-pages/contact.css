@@ -19,7 +19,7 @@ body {
   margin-left:10px;
     margin-right: 15px;
 }
-  #git{
+  .git{
     padding-top: 35px;
     text-align: center;
 }
@@ -33,6 +33,14 @@ a[href="https://www.github.com/georgemois23"] #imgg {
     margin: 0 auto;
 }
 a[href="https://www.github.com/georgemois23"]  {
+    display: block;
+    text-align: center;
+    height: 100px;
+}
+a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
+    margin: 0 auto;
+}
+a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
     display: block;
     text-align: center;
     height: 100px;
