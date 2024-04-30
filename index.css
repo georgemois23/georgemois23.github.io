@@ -50,6 +50,12 @@
   font-family: 'Miracode'; /* Name your font family */
   src: url("/other-pages/Miracode.ttf");}
 
+ #george{
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 60px;
+ } 
+
 .hand{
   font-family: "Miracode";
   font-weight: 600;
