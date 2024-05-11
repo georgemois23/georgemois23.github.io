@@ -3,28 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-    <title>404</title>
+    <link rel="icon" type="image/svg+xml" href="error-page.svg">
+    <title>Page not found!</title>
 </head>
 <style>
-    html{
-    resize: none;
-    height: 100%;
-    background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
-    overflow-y: auto;
-    overflow: hidden;
+    @font-face {
+  font-family: 'Miracode'; /* Name your font family */
+  src: url("/other-pages/Miracode.ttf");}
 
-    overflow-x: hidden;}
-    h1{
-        text-align: center;
+    html{
+    /* resize: none; */
+    /* height: 100%; */
+    background-color: #240041;
+    overflow-y: auto;
+    /* overflow: hidden; */
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
     }
     .fff{
-        font-size: 100px;
-        color: red;
+        font-size: 150px;
+        font-family: 'Miracode';
     }
+
+    .ddiv{
+        padding-top: 10px;
+        
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        font-style:italic;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
+        font-weight: bolder;}
 </style>
 <body>
-    <h1 >Not found!</h1>
     <h1 class="fff">404</h1>
+    <div >The link you clicked may be broken or the page may have burst.</div>
+    <div class="ddiv">Visit the <a href="index.html" target="_parent">home</a> page</div>
+   
 
 </body>
 </html>
