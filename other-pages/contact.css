@@ -101,21 +101,24 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
         }
 
   /* navigation start */
-.navigation {
-  list-style: none;
-  /* margin: 10px 10px; */
-  /* background: rgb(255, 255, 255); */
-     /* background:  antiquewhite; */
-  /* border-radius: 15px; */
-  /* border-style:solid; */
-  /* border-color: rgb(93, 23, 93); */
-  display: flex;
-  justify-content:space-evenly;
-  align-items: center;
-  width: 70vw;
-  /* padding-right: 20px; */
-}
-
+  .navigation {
+    /* padding-top:10%; */
+    position: sticky;
+    list-style: none;
+    /* margin: 10px 10px; */
+    /* background: rgb(255, 255, 255); */
+       /* background:  antiquewhite; */
+    /* border-radius: 15px; */
+    /* border-style:solid; */
+    /* border-color: rgb(93, 23, 93); */
+    display: flex;
+    justify-content:space-evenly;
+    border: 1px solid var(--bricks-color-ed8078);
+    align-items: center;
+    /* width: 70vw; */
+    padding-left: 0;
+    /* padding-right: 20px; */
+  }
 
 .navigation a {
   text-decoration: none;
@@ -164,12 +167,23 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
     40% {border-color: transparent;}
   }
   
-  @media all and (max-width:575px) {
-    .navigation {
+  @media all and (min-width:570px) {
+    .navigation  {
+      gap: 50px;
+    }}
+  @media all and (max-width:500px) {
+    .navigation  {
        flex-direction: column;
         flex-wrap: wrap;
-        padding: 0; 
+        padding: 0;  
     }}
+  @media all and (max-width:200px) {
+    .navigation  {
+       flex-direction:row;
+        
+        padding: 0;  
+    }}
+  
 
   /* Keyframes for the typing animation */
   @keyframes typing {

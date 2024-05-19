@@ -2,6 +2,38 @@
     background-color: lightcyan;
 } */
 
+.first-section-content{
+  /* padding-top: 5%; */
+}
+.first-section{
+  background-color: #240041; 
+  padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 120px;
+   
+}
+
+
+.rest-of-page.fade-in {
+  opacity: 1; /* Show the section with full opacity */
+}
+
+.rest-of-page {
+  opacity: 0; /* Initially hide the section */
+  transition: opacity 1s ease; /* Smooth transition when opacity changes */
+  padding-top: 10%; /* Adjust this value as needed */
+  padding: 0;
+  margin: 0;
+  /* Remove overflow styles */
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
+  background-image: url('https://featureapps.volkswagen.co.uk/feature-apps-assets/fa-yourwagen-vwpc/057eee2b341ce71ecfd7998f7649b9b5be09d6d4/images/background-texture-tear-top-fade.png');
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-attachment: sticky; /* Fix the background image in the viewport */
+  height: 100vh; /* Set the height to 100% of the viewport */
+}
+
 .active {
   background-color:black;
   border-radius: 15px;
@@ -56,6 +88,38 @@
   font-size: 60px;
  } 
 
+
+ /* .texture {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+
+
+.hKaeJX {
+  position: absolute;
+  inset: 0px;
+  background-color: white;
+  background-image: url(https://featureapps.volkswagen.co.uk/feature-apps-assets/fa-yourwagen-vwpc/057eee2…/images/background-texture.png);
+  background-repeat: repeat;
+  background-size: auto;
+  width: 100%;
+  height: 300%;
+  z-index: -1;
+} */
+
+.texture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: repeat-y; /* Repeat the image vertically */
+    background-attachment: fixed; /* Fix the background image in the viewport */
+}
+
+
 .hand{
   font-family: "Miracode";
   font-weight: 600;
@@ -65,11 +129,9 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top: 10px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin-left:10px;
-    margin-right: 15px;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  
 }
 .container{
   /* padding-top: 0; */
@@ -114,16 +176,28 @@ header{
 }
 
 
-@media all and (max-width:675px) {
+@media all and (min-width:570px) {
+  .navigation  {
+    gap: 50px;
+  }}
+@media all and (max-width:500px) {
   .navigation  {
      flex-direction: column;
       flex-wrap: wrap;
+      padding: 0;  
+  }}
+@media all and (max-width:200px) {
+  .navigation  {
+     flex-direction:row;
+      
       padding: 0;  
   }}
 
 
 /* navigation start */
 .navigation {
+  /* padding-top:10%; */
+  position: sticky;
   list-style: none;
   /* margin: 10px 10px; */
   /* background: rgb(255, 255, 255); */
@@ -135,7 +209,7 @@ header{
   justify-content:space-evenly;
   border: 1px solid var(--bricks-color-ed8078);
   align-items: center;
-  width: 70vw;
+  /* width: 70vw; */
   padding-left: 0;
   /* padding-right: 20px; */
 }
@@ -144,7 +218,7 @@ header{
 .navigation a {
   text-decoration: none;
   /* display: block; */
-  top:10px;
+  top:5px;
   width:60%;
   z-index: 1;
   /* min-height: 50px; */
@@ -285,6 +359,7 @@ header{
     background-size:auto;
     width: 100%; 
     height: 100%;
+    background-color: #240041; 
     /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
     /* background: linear-gradient(157deg,#659fdd 0%,#161a38 100%);
      */
@@ -299,7 +374,7 @@ header{
 
     /* background-color: rgba(20, 20, 20); */
 
-    background-color: #240041; 
+    /* background-color: #240041;  */
     /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1295275/background-noise.png), rgb(20, 20, 20);;*/
     /* animation: 0.2s infinite noise;  */
     /* opacity: 1;  */

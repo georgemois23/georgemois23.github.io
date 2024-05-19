@@ -13,7 +13,7 @@
 
     html{
     /* resize: none; */
-    /* height: 100%; */
+    height: 100svh;
     background-color: #240041;
     overflow-y: auto;
     /* overflow: hidden; */
@@ -21,11 +21,29 @@
     overflow-x: hidden;
     text-align: center;
     }
+
+    
+
+@keyframes blinker {
+  50% {
+    opacity: 0.8;
+    /* delay: 1s; */
+    /* color: black; */
+  }
+}
+    
     .fff{
-        font-size: 150px;
+        font-size: 300px;
         font-family: 'Miracode';
+        text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+        margin-bottom: 0;
+        margin-top: 10%;
+        animation: blinker 1s infinite;
     }
 
+    div{
+        font-size: 24px;
+    }
     .ddiv{
         padding-top: 10px;
         
@@ -44,7 +62,7 @@
 </style>
 <body>
     <h1 class="fff">404</h1>
-    <div >The link you clicked may be broken or the page may have burst.</div>
+    <div>The link you clicked may be broken or the page may have burst.</div>
     <div class="ddiv">Visit the <a href="index.html" target="_parent">home</a> page</div>
    
 
