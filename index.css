@@ -139,9 +139,10 @@ hr {
     flex: 1 1 100%;
   }
   .under-nav{
-    margin-left: 2rem;
+    margin-inline: auto;
   }
   .footer{
+    margin-inline: auto;
   margin-bottom: 4rem;
   }
 } 
