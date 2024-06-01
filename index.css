@@ -88,15 +88,18 @@ hr {
   background-image: linear-gradient(to right, rgba(2, 90, 78, 0), rgba(2, 90, 78, 0.75), rgba(2, 90, 78, 0));
 }
 .footer{
-  padding-left: 5rem;
-  margin: 2rem;
+  
   text-align: center;
+  display: block;
+  margin-inline: auto;
   color: var(--txt);
   font-family: "Waterfall", cursive;
   font-weight: 600;
   font-style: normal;
   font-size: 30px;
 }
+
+
 * {
   margin: 0;
   padding: 0;
@@ -139,10 +142,10 @@ hr {
     flex: 1 1 100%;
   }
   .under-nav{
-    margin-inline: auto;
+    margin: 0 3rem;
   }
   .footer{
-    margin-inline: auto;
+    /* margin: 0 3rem; */
   margin-bottom: 4rem;
   }
 } 
@@ -150,6 +153,8 @@ hr {
   .space{
     height: 150px;
   }
+
+  /* big screens */
 @media all and (min-width:756px) {
   .navigation  {
     flex-direction: column;
@@ -167,6 +172,10 @@ hr {
   }
   .under-nav{
     margin-left: 6rem;
+  }
+  .footer{
+    padding-left: 40px;
+  margin-bottom: 4rem;
   }
 } 
 
