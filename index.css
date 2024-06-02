@@ -12,6 +12,7 @@ html, body {
 }
 /* navigation start */
 .navigation {
+  
   position: fixed;
   
   overflow: auto;
@@ -42,6 +43,26 @@ html, body {
   /* padding-right: 20px; */
 }
 
+@keyframes xx {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes yy {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .navigation a {
   font-family: "Advent Pro", sans-serif;
@@ -88,15 +109,23 @@ hr {
   background-image: linear-gradient(to right, rgba(2, 90, 78, 0), rgba(2, 90, 78, 0.75), rgba(2, 90, 78, 0));
 }
 .footer{
-  
+  align-self: center;
   text-align: center;
   display: block;
-  margin-inline: auto;
+  /* margin-inline: auto; */
   color: var(--txt);
   font-family: "Waterfall", cursive;
   font-weight: 600;
   font-style: normal;
   font-size: 30px;
+}
+.space{
+  height: 150px;
+}
+
+.hh{
+  color: var(--txt);
+margin-left: 1rem;
 }
 
 
@@ -124,6 +153,7 @@ hr {
 }
 @media all and (max-width:756px) {
   .navigation  {
+    animation: yy .5s ease-in;
     flex-direction: row;
     bottom: 0;
     height: 3rem;
@@ -132,17 +162,18 @@ hr {
     padding-top: 10px;
     justify-content: space-around;
     border-top: 7px solid #025a4e;
-    border-left: 2px solid #025a4e;
-    border-right: 2px solid #025a4e;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-left: 3px solid #025a4e;
+    border-right: 3px solid #025a4e;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
   }
 
   .navigation a{
     flex: 1 1 100%;
   }
   .under-nav{
-    margin: 0 3rem;
+    padding: 0 3rem;
+    
   }
   .footer{
     /* margin: 0 3rem; */
@@ -150,43 +181,49 @@ hr {
   }
 } 
 
-  .space{
-    height: 150px;
-  }
-
+ 
   /* big screens */
 @media all and (min-width:756px) {
   .navigation  {
+    animation: xx .5s ease-in;
     flex-direction: column;
     height: 100vh;
   width: 5.3rem;
   top:0;
   gap: 6rem;
   padding: 10px;
-  border-right: 5px solid #025a4e;
+  border-right: 8px solid #025a4e;
   border-top: 3px solid #025a4e;
   border-bottom: 3px solid #025a4e;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
   /* border-radius: 10px; */
   }
   .under-nav{
     margin-left: 6rem;
   }
   .footer{
-    padding-left: 40px;
+    /* margin-inline-start: auto; */
   margin-bottom: 4rem;
+  margin-left: 9.8rem;
   }
 } 
 
+#home{
+  margin-top: 2rem;
+  scroll-margin-top: 150px; 
+}
 
-#contact,#home,#contact{
+#contact,#contact{
   margin-top: 6rem;
   scroll-margin-top: 150px; 
 }
 .h{
   color: var(--txt);
   margin-left: 1rem;
+  font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .homee{
@@ -239,7 +276,7 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
 }
 #projects{
   margin-top: 8rem;
-  scroll-margin-top: 150px; 
+  scroll-margin-top: 50px; 
   /* width: 100vw; */
   height: 800px;
   /* border: 2px solid black; */
@@ -542,7 +579,7 @@ header{
   /* } */
   
   html{
-    font-family: "Gloria Hallelujah", cursive;
+    font-family: "Advent Pro", sans-serif;
   font-weight: 400;
     font-style: normal;
     font-size: 22px;
