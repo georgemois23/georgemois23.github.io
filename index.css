@@ -43,9 +43,7 @@ html, body {
   /* padding-right: 20px; */
 }
 
-.navigation a:active{
-  font-weight: 900;
-}
+
 
 @keyframes xx {
   0% {
@@ -87,7 +85,6 @@ html, body {
   transition: all 250ms ease;
   opacity: 1;
 }
-
 
 
 
@@ -138,45 +135,14 @@ margin-left: 1rem;
   padding: 0;
   box-sizing: border-box;
 }
-@media all and (max-width:310px) {
-.navigation{
-  visibility: hidden;
-}
-}
-@media all and (max-width:397px) {
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    height: 20vh;
-   }
- 
 
-    }
-@media all and (max-width:430px) {
-  .navigation  {
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    bottom: 0;
-    height: 3rem;
-    width: 100vw;
-    align-items: center;
-    
-    gap: 0;
-    justify-content: center;
-  }
-  .navigation a{
-    font-size: 18px;
-    font-weight: 800;
-    padding-inline: auto;
-    flex: 0;
-  }
-}
+
+
 @media all and (max-width:756px) {
   .navigation  {
     display: flex;
     animation: yy .5s ease-in;
-    flex-direction: row;
+    /* flex-direction: column; */
     bottom: 0;
     height: 3rem;
     align-items: center;
@@ -208,11 +174,56 @@ margin-left: 1rem;
   }
 
 } 
+@media all and (max-width:430px) {
+  .navigation  {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    bottom: 0;
+    height: 3rem;
+    width: 100vw;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+  }
+  .navigation a{
+    /* font-size: 18px; */
+    /* font-weight: 800; */
+    padding-inline: auto;
+    flex: 0;
+    
+  }
+}
+@media all and (max-width:320px) {
+  .navigation {
+    display:flex;
+    text-align: center;
+    bottom: 0;
+    height: 3rem;
+    width: 100vw;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+   }
+ 
 
+    }
+
+    @media all and (max-width:310px) {
+      .navigation a{
+        flex-shrink: 3;
+      }
+      }
+    @media all and (max-width:274px) {
+      .navigation {
+        visibility: hidden;
+      }
+      }
  
   /* big screens */
 @media all and (min-width:756px) {
   .navigation  {
+    margin-top: 0.2px;
     display: flex;
     animation: xx .5s ease-in;
     flex-direction: column;
