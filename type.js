@@ -73,3 +73,11 @@ function isInViewport(element) {
   
   // Existing code from type.js continues...
   
+
+  const button = document.getElementById('visitt');
+  let bodyy= document.querySelector('.construction');
+  button.addEventListener('click', function (evt) {
+    bodyy.style.visibility = 'hidden';
+    document.querySelector('.underconstruction').style= 'filter: none';
+    document.querySelector('.navigation').style.visibility='visible';
+    }, false);
