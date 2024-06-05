@@ -76,9 +76,24 @@ function isInViewport(element) {
 
   const button = document.getElementById('visitt');
   let bodyy= document.querySelector('.construction');
-  document.querySelector('html').classList.toggle('prevent-scrolling');
+  const hasVisited = sessionStorage.getItem('hasVisited');
+  localStorage.setItem('hasVisited', false);
+// Check if the user has already visited the site
+if (!hasVisited) {
+    // If not, show the construction class
+    bodyy.style.visibility = 'visible';
+    document.querySelector('html').classList.toggle('prevent-scrolling');
+}
+else{
+    // If not, show the construction class
+    bodyy.style.visibility = 'hidden';
+    document.querySelector('.underconstruction').style= 'filter: none';
+    document.querySelector('.navigation').style.visibility='visible';
+    document.querySelector('html').classList.remove('prevent-scrolling');
+}
+  
   button.addEventListener('click', function (evt) {
-    
+    sessionStorage.setItem('hasVisited', true);
     bodyy.style.visibility = 'hidden';
     document.querySelector('.underconstruction').style= 'filter: none';
     document.querySelector('.navigation').style.visibility='visible';
