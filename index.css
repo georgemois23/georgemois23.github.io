@@ -69,8 +69,17 @@ html, body {
     margin-top: 20px;
 }
 
+.prevent-scrolling {
+
+  position: fixed;
+
+  width: 100%; 
+}
 .underconstruction  {
-  filter: blur(10px);
+  /* background-color: var(--backg); */
+  filter: blur(20px);
+  /* height: 100%;  */
+  /* overflow: hidden; */
 }
 /* navigation start */
 .navigation {

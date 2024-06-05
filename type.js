@@ -76,8 +76,11 @@ function isInViewport(element) {
 
   const button = document.getElementById('visitt');
   let bodyy= document.querySelector('.construction');
+  document.querySelector('html').classList.toggle('prevent-scrolling');
   button.addEventListener('click', function (evt) {
+    
     bodyy.style.visibility = 'hidden';
     document.querySelector('.underconstruction').style= 'filter: none';
     document.querySelector('.navigation').style.visibility='visible';
+    document.querySelector('html').classList.remove('prevent-scrolling');
     }, false);
