@@ -58,7 +58,7 @@ html, body {
   cursor: pointer;
   color: var(--backg);
   background-color:var(--txt);
-    color: white;
+    color: var(--backg);
     border: 2px solid #1B1B1B;
     box-sizing: border-box;
     box-shadow: 6px 6px 0px #1B1B1B;
@@ -67,6 +67,11 @@ html, body {
     text-align: center;
     font-weight: 800;
     margin-top: 20px;
+}
+
+#visitt:hover{
+  background-color:var(--backg);
+  color:var(--txt);
 }
 
 .prevent-scrolling {
