@@ -62,7 +62,9 @@ window.addEventListener('scroll', handleScroll);
 function toggleExpand() {
   const button = document.querySelector('.expandable-button');
   button.classList.toggle('expanded');
+  event.preventDefault();
 }
+
 
 // Color Scheme toggle
 document.getElementById('clr').addEventListener('click', function() {
