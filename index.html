@@ -25,12 +25,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Waterfall&display=swap" rel="stylesheet">
 </head>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    </style>
 <body>
     <div class="c">
     <div class="construction"> 
         <h1>The site is under construction</h1>
     <button id="visitt">Visit at your own risk</button></div></div>
-    <div class="underconstruction">
+    <div id="mainContent" class="hidden">
+    <div class="underconstruction" style="visibility: hidden;">
 
     <div id="home">
     <!-- <header> -->
@@ -52,12 +62,12 @@
         <!-- <section> -->
         <div class="name"> 
 
-        
-        <div><span class="auto-type2"></span><span class="typed-cursor" aria-hidden="true"></span></div>
-        <span class="auto-type3"></span><span class="typed-cursor" aria-hidden="true"></span><span class="auto-type4"></span><span class="typed-cursor" aria-hidden="true"></span>
-
+        <br>
+        <!-- <div><span class="auto-type2"></span><span class="typed-cursor" aria-hidden="true"></span></div> -->
+        <!-- <span class="auto-type3"></span><span class="typed-cursor" aria-hidden="true"></span><span class="auto-type4"></span><span class="typed-cursor" aria-hidden="true"></span> -->
+        <div>My name is George Moysiadis, I am from Greece and I am a student of Computer Science.</div>
         <!-- <div>My name is George Moysiadis, I come from Greece and I am a student of Computer Science</div>  -->
-
+            <!-- <button id="clr"><img src="/other-pages/lightbulb_.svg"></button> -->
     
     </div>
 </div>
@@ -66,6 +76,10 @@
    
     <br>
     <div class="space"></div>
+    <div class="expandable-button" onclick="toggleExpand()">
+        <span class="arrow">←</span>
+        <button id="clr"><img src="/other-pages/lightbulb_.svg"></button>
+    </div>
     <!-- <div class="container">
         
         <div id="cont1">bla</div>
@@ -117,7 +131,7 @@
 <div id="projects">
     <div class="hh">
         <h1>These are my projects</h1></div>
-
+        <button id="cv"> View my CV</button>
 <br>
 <br>
 <br>
@@ -137,7 +151,7 @@
         <h2 class="git">Visit my LinkedIn account</h2>
             <!-- <h2 id="contactt">Contact me:</h2> -->
             
-        <a href="https://www.linkedin.com/in/george-moysiadis/"><img id="imgg" src="/other-pages/linkedin.svg"></a>
+        <a href="https://www.linkedin.com/in/george-moysiadis/"><img id="imgg1" src="/other-pages/linkedin.svg"></a>
         <!-- <div ><a href="https://www.github.com/georgemois23"><Press here!></a> </div> -->
     
 </div>
@@ -152,7 +166,7 @@
     <hr>
     Made with love by George Moysiadis.
 </footer>
-</div>
+</div></div>
 <script src="type.js"></script>
 <style data-typed-js-cursor-css="true">
    
