@@ -62,6 +62,7 @@ window.addEventListener('scroll', handleScroll);
 function toggleExpand() {
   const button = document.querySelector('.expandable-button');
   button.classList.toggle('expanded');
+  document.getElementById('arrow').innerHTML="←";
   event.preventDefault();
 }
 

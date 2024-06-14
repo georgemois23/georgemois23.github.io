@@ -7,7 +7,9 @@ html, body {
 
 :root{
   --txt: #025a4e;
+  --txt-scn: #2e615e;
   --backg: #ede7de;
+  --backg-scn: #e3ddce;
 
 }
 
@@ -15,29 +17,38 @@ html, body {
   display: none;
 
 }
-
+.arrow{
+  transform: rotate(-90deg);
+  display: flex;
+  padding-bottom: 1.4rem;
+  font-size: 26px;
+}
 .expandable-button {
   position: fixed;
   top:1rem;
+  padding-left: 0;
   right:0.0001rem;
   display: flex;
   align-items: center;
   background-color: var(--txt);
   color: var(--backg);
   /* padding: 10px 20px; */
+  
+  /* border: 1px solid black; */
   border: 0.1px solid var(--backg);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-left-radius: 5px; */
+  border-radius: 88px 66px 44px 22px/22px 44px 66px 88px;
   transition: width 0.1s ease, background-color 0.1s ease, color 0.1s ease-out;
-  width: 15px;
-  height: 60px;
+  width: 35px;
+  height: 80px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .expandable-button #clr {
   opacity: 0;
-  transition: opacity 0.1s ease;
+  transition: opacity 50ms ease;
   white-space: nowrap;
 }
 
@@ -93,7 +104,7 @@ button{
     color: var(--backg);
     border: 2px solid #1B1B1B;
     box-sizing: border-box;
-    box-shadow: 6px 6px 0px #1B1B1B;
+    box-shadow: 2px 1.5px 0px #1B1B1B;
     border-radius: 16px;
     padding: 16px 16px 16px 16px;
     text-align: center;
@@ -103,7 +114,10 @@ button{
 }
 
 
-
+#cv{
+  
+  border-radius: 88px 66px 44px 12px/32px 44px 66px 88px;
+}
 /* #cv:hover{
 background-color: var(--backg);
 color: var(--txt);
@@ -313,6 +327,8 @@ margin-left: 1rem;
   .expandable-button.expanded{
     width: 60px;
     height: 50px;
+    
+  
     /* background-color: transparent; */
     color: transparent;
     border: none;
@@ -373,12 +389,12 @@ margin-left: 1rem;
 
     bottom: 1rem;
     right: 1rem;
-    text-decoration: underline  1px rgba(255, 255, 255, 0);
-    transition: text-decoration-color 200ms;
   }
 
   #cv:hover{
-    text-decoration-color: var(--backg);
+      text-decoration: underline;
+      transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
+      /* font-weight: bolder; */
 
   }
 
@@ -399,21 +415,26 @@ margin-left: 1rem;
   }
   .expandable-button:hover{
     width: 50px;
-    height: 60px;
+    height: 80px;
     color: transparent;
     border: 4px solid var(--txt);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    /* border-top-left-radius: 10px; */
+    /* border-bottom-left-radius: 10px; */
     border-right: 1px solid var(--backg);
     transform: background-color none ;
+    /* border-top-left-radius: 5px; */
+  /* border-bottom-left-radius: 5px; */
+  border-top-right-radius: none;
+    
   }
   
   .expandable-button:hover #clr {
     opacity: 1;
     margin-right: 5px;
+    padding-top: 1.45rem;
     /* padding-bottom: 2px; */
     /* padding-top: 10px; */
-  
+    
     
   }
 } 
