@@ -66,7 +66,26 @@ function toggleExpand() {
   event.preventDefault();
 }
 
+const mediaQuery = window.matchMedia('(max-width: 756px)');
 
+function handleMediaQueryChange(event) {
+  const arrowElement = document.querySelector('.arrow');
+  if (event.matches) {
+    arrowElement.innerHTML = '←';
+    arrowElement.style.transform = 'rotate(0deg)';
+    arrowElement.style.paddingBottom = '0';
+  } else {
+    arrowElement.innerHTML = 'LIGHTS'; // Ή όποιο άλλο περιεχόμενο θέλετε όταν η οθόνη είναι μεγαλύτερη
+    arrowElement.style.transform = 'rotate(-90deg)'; // Ή άλλες προεπιλεγμένες τιμές
+    arrowElement.style.paddingBottom = '1.4rem'; // Ή άλλες προεπιλεγμένες τιμές
+  }
+}
+
+// Ελέγξτε την αρχική κατάσταση
+handleMediaQueryChange(mediaQuery);
+
+// Προσθέστε έναν listener για τις αλλαγές
+mediaQuery.addEventListener('change', handleMediaQueryChange);
 // Color Scheme toggle
 document.getElementById('clr').addEventListener('click', function() {
   const currentTxtColor = getComputedStyle(document.documentElement).getPropertyValue('--txt').trim();
