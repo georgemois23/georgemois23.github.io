@@ -269,7 +269,7 @@ margin-left: 1rem;
 
 
 
-
+/* small screens */
 @media all and (max-width:756px) {
   .navigation  {
     display: flex;
@@ -352,6 +352,10 @@ margin-left: 1rem;
     visibility: visible;
     /* pointer-events: auto; */
     
+  }
+
+  .arrow{
+    padding-block: auto;
   }
 }
 
