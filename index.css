@@ -118,7 +118,7 @@ button{
 
 #cv{
   
-  border-radius: 88px 66px 44px 12px/32px 44px 66px 88px;
+  border-radius: 88px 16px 44px 92px/32px 44px 66px 18px;
 }
 /* #cv:hover{
 background-color: var(--backg);
@@ -303,6 +303,8 @@ margin-left: 1rem;
   .footer{
     /* margin: 0 3rem; */
   margin-bottom: 4rem;
+  font-size: 20px;
+  font-weight: 200;
   }
 
   .construction{
@@ -377,8 +379,9 @@ margin-left: 1rem;
   }
   .footer{
     /* margin-inline-start: auto; */
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-left: 9.8rem;
+  font-weight: 300;
   }
   #contact {
     margin-top: 6rem;
