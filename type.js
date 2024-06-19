@@ -139,6 +139,8 @@ button.addEventListener('click', function(evt) {
   initializeTyped();
 }, false);
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const colorScheme = localStorage.getItem('colorScheme');
   if (colorScheme === 'dark') {
