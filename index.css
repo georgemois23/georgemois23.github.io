@@ -119,6 +119,7 @@ button{
 #cv{
   
   border-radius: 88px 16px 44px 92px/32px 44px 66px 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 /* #cv:hover{
 background-color: var(--backg);
@@ -565,6 +566,20 @@ a[href="https://www.github.com/georgemois23"]  {
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
   margin: 0 auto;
+}
+.insta{
+  text-decoration: none;
+  color: var(--txt);
+  cursor:default;
+}
+
+#img,#imgg1{
+  transition: 200ms ease;
+  scale: 1;
+}
+#imgg:hover,#imgg1:hover{
+  transition: 100ms ease;
+  scale: 1.1;
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   display: block;
