@@ -1,3 +1,13 @@
+document.getElementById('menu').addEventListener('click',function(){
+  if((getComputedStyle(document.querySelector('.navigation')).visibility) == 'hidden'){
+  document.querySelector('.navigation').style.visibility = 'visible';
+  document.getElementById('menu').style = 'margin-left: 1.5rem;'; 
+}
+else {document.querySelector('.navigation').style.visibility= 'hidden';
+  document.getElementById('menu').style = 'margin-left: 1rem;';
+}
+});
+
 // Function to initialize Typed
 function initializeTyped() {
   if (!sessionStorage.getItem('typedInitialized')) {
@@ -95,6 +105,7 @@ document.getElementById('clr').addEventListener('click', function() {
       document.getElementById('clr').querySelector('img').src = '/other-pages/lightbulb.svg';
       document.getElementById('imgg').src = '/other-pages/github_.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin_.svg';
+      document.getElementById('menu').src = '/other-pages/menu.svg';
       localStorage.setItem('colorScheme', 'dark');
   } else {
       document.documentElement.style.setProperty('--txt', '#025a4e');
@@ -102,6 +113,7 @@ document.getElementById('clr').addEventListener('click', function() {
       document.getElementById('clr').querySelector('img').src = '/other-pages/lightbulb_.svg';
       document.getElementById('imgg').src = '/other-pages/github.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin.svg';
+      document.getElementById('menu').src = '/other-pages/menu_.svg';
       localStorage.setItem('colorScheme', 'light');
   }
 });
@@ -124,7 +136,7 @@ if (!hasVisited) {
 } else {
   bodyy.style.visibility = 'hidden';
   document.querySelector('.underconstruction').style = 'filter: none';
-  document.querySelector('.navigation').style.visibility = 'visible';
+  // document.querySelector('.navigation').style.visibility = 'visible';
   document.querySelector('html').classList.remove('prevent-scrolling');
   mainContent.style.display = 'block';
   initializeTyped();
@@ -157,3 +169,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('imgg1').src = '/other-pages/linkedin.svg';
   }
 });
+
+document.getElementById('linkd').addEventListener('click',function(){
+  open("https://www.linkedin.com/in/george-moysiadis/", "_blank");
+  document.getElementById('gith').style.color='red';
+})
+
+document.getElementById('cv').addEventListener('mouseover',function(){
+  document.getElementById('cv1').innerHTML='View my cv'
+})

@@ -13,6 +13,14 @@ html, body {
 
 }
 
+#menu{
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+  top: 1rem;
+  position: fixed;
+  height:30px;
+  z-index: 10000;
+}
 .hidden{
   display: none;
 
@@ -162,11 +170,11 @@ color: var(--txt);
 .navigation {
   animation: none;
   position: fixed;
-  /* visibility: hidden; */
+  visibility: hidden;
   /* overflow: auto; */
   list-style: none;
   z-index: 1000;
-  
+  transition: 600ms ease;
   /* margin: 10px 10px; */
   /* background: rgb(255, 255, 255); */
      /* background:  antiquewhite; */
@@ -283,6 +291,7 @@ margin-left: 1rem;
     align-items: center;
     width: 100vw;
     gap:3rem;
+    visibility: visible;
     /* padding-top: 10px; */
     justify-content: space-around;
     border-top: 7px solid var(--txt);
@@ -297,6 +306,7 @@ margin-left: 1rem;
   }
   .under-nav{
     padding: 0 3rem;
+    min-height: 100vh;
     
   }
   #contact {
@@ -326,6 +336,9 @@ margin-left: 1rem;
     border-radius: 10px;
   }
 
+  #menu{
+    visibility: hidden;
+  }
   #cv{
     margin: 1rem ;
   }
@@ -408,12 +421,12 @@ margin-left: 1rem;
     right: 1rem;
   }
 
-  #cv:hover{
+  /* #cv:hover{
       text-decoration: underline;
       transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
-      /* font-weight: bolder; */
+      /* font-weight: bolder; *
 
-  }
+  } */
 
   #clr{
     position: fixed;
@@ -573,13 +586,22 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
   cursor:default;
 }
 
-#img,#imgg1{
-  transition: 200ms ease;
-  scale: 1;
-}
-#imgg:hover,#imgg1:hover{
+
+#imgg:hover{
   transition: 100ms ease;
   scale: 1.1;
+}
+#imgg1:hover{
+  transition: 100ms ease;
+  scale: 1.1;
+}
+#imgg1{
+  transition: 900ms ease-out;
+  scale: 1;
+}
+#img{
+  transition: 200ms ease-out;
+  scale: 1;
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   display: block;
@@ -894,6 +916,18 @@ header{
     height: 30px;
     width: 30px;
     
+  }
+
+  #cv{
+    scale: 1;
+    transition: 100ms ease-in-out;
+  }
+
+  #cv:hover{
+    font-size: 14px;
+    font-weight: 900;
+    scale: 1.05;
+    transition: 100ms ease-in-out;
   }
 /*   
   .noise-background {
