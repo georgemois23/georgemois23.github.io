@@ -1,12 +1,21 @@
-document.getElementById('menu').addEventListener('click',function(){
-  if((getComputedStyle(document.querySelector('.navigation')).visibility) == 'hidden'){
-  document.querySelector('.navigation').style.visibility = 'visible';
-  document.getElementById('menu').style = 'margin-left: 1.5rem;'; 
-}
-else {document.querySelector('.navigation').style.visibility= 'hidden';
-  document.getElementById('menu').style = 'margin-left: 1rem;';
-}
-});
+document.addEventListener('DOMContentLoaded', (event) => {
+  const menu = document.getElementById('menu');
+  const navigation = document.querySelector('.navigation');
+
+  menu.addEventListener('click', function () {
+    navigation.style.visibility='visible';
+    // menu.classList.toggle('shifted');
+    menu.style.display='none';
+    
+  
+});});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const menu = document.getElementById('menu1');
+  menu.addEventListener('click', function () {
+    document.getElementById('menu').style.display='block';
+  document.querySelector('.navigation').style.display='none';
+ });});
 
 // Function to initialize Typed
 function initializeTyped() {
@@ -106,6 +115,7 @@ document.getElementById('clr').addEventListener('click', function() {
       document.getElementById('imgg').src = '/other-pages/github_.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin_.svg';
       document.getElementById('menu').src = '/other-pages/menu.svg';
+      document.getElementById('menu').src = '/other-pages/minimize.svg';
       localStorage.setItem('colorScheme', 'dark');
   } else {
       document.documentElement.style.setProperty('--txt', '#025a4e');
@@ -114,6 +124,7 @@ document.getElementById('clr').addEventListener('click', function() {
       document.getElementById('imgg').src = '/other-pages/github.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin.svg';
       document.getElementById('menu').src = '/other-pages/menu_.svg';
+      document.getElementById('menu').src = '/other-pages/minimize_.svg';
       localStorage.setItem('colorScheme', 'light');
   }
 });
