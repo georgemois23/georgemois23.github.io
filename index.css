@@ -391,6 +391,15 @@ margin-left: 1rem;
   .arrow{
     padding-block: auto;
   }
+
+  .logo{
+    background-color: var(--backg);
+    width: 100vw;
+  }
+
+  .x{
+    display: none;
+  }
 }
 
   /* big screens */
@@ -666,6 +675,21 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   margin-top: 1px;
   line-height: normal;
   position: fixed;
+  user-select: none;
+}
+
+#hid{
+  display: none;
+  position:fixed;
+  top: 0rem;
+  left: 6.9rem;
+  background-color: var(--txt);
+  border-radius: 10px;
+}
+
+#hid a {
+  text-decoration: none;
+  color: var(--backg);
 }
  .logo{
   color: var(--txt);
@@ -684,6 +708,7 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   /* justify-content: flex-start; */
   
   position: fixed;
+  user-select: none;
 
 }
 
@@ -951,8 +976,23 @@ header{
   }
 
   #cv{
+    letter-spacing: 1px;
     scale: 1;
-    transition: 100ms ease-in-out;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+  }
+
+  #cv:hover {
+    padding: 19px 22px; /* Slightly larger padding on hover */
+  }
+  
+  /* Keyframes for scaling animation */
+  @keyframes scaleAnimation {
+    from {
+      transform: scale(1); /* Start at normal size */
+    }
+    to {
+      transform: scale(1.1); /* Scale up to 110% */
+    }
   }
 
   /* #cv:hover{

@@ -17,6 +17,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
+document.querySelector('.logo').addEventListener('mouseover',function(){
+  document.getElementById('hid').style.display='block';
+});
+document.getElementById('hid').addEventListener('mouseover',function(){
+  document.getElementById('hid').style.display='block';
+});
+document.querySelector('.logo').addEventListener('mouseout',function(){
+  document.getElementById('hid').style.display='none';
+});
+document.getElementById('hid').addEventListener('mouseout',function(){
+  document.getElementById('hid').style.display='none';
+});
+document.querySelector('.x').addEventListener('mouseover',function(){
+  document.querySelector('.x').innerHTML='dont leave yet :(';
+  document.querySelector('.x').style.fontWeight='900';
+
+});
+document.querySelector('.x').addEventListener('mouseout',function(){
+  document.querySelector('.x').innerHTML='X';
+  document.querySelector('.x').style.fontWeight='500';
+});
+
+document.getElementById('cv').addEventListener('mouseover', function() {
+  document.getElementById('cv1').innerHTML = 'View my CV';
+});
+
+document.getElementById('cv').addEventListener('mouseout', function() {
+  document.getElementById('cv1').innerHTML = 'CV';
+});
+
+// JavaScript to add class for scaling animation
+document.getElementById('cv').addEventListener('mouseover', function() {
+  this.classList.add('hovered');
+});
+
+document.getElementById('cv').addEventListener('mouseout', function() {
+  this.classList.remove('hovered');
+});
+
 // Function to initialize Typed
 function initializeTyped() {
   if (!sessionStorage.getItem('typedInitialized')) {
