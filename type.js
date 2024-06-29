@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const menu = document.getElementById('menu');
+  const closeMenu = document.getElementById('menu1');
   const navigation = document.querySelector('.navigation');
 
   menu.addEventListener('click', function () {
-    navigation.style.visibility='visible';
-    // menu.classList.toggle('shifted');
-    menu.style.display='none';
-    
-  
-});});
+    navigation.style.visibility = 'visible';
+    document.querySelector('.logo').style.display='none';
+    menu.style.display = 'none';
+    closeMenu.style.display = 'block';
+  });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const menu = document.getElementById('menu1');
-  menu.addEventListener('click', function () {
-    document.getElementById('menu').style.display='block';
-  document.querySelector('.navigation').style.display='none';
- });});
+  closeMenu.addEventListener('click', function () {
+    navigation.style.display = 'none';
+    menu.style.display = 'block';
+    closeMenu.style.display = 'none';
+  });
+});
 
 // Function to initialize Typed
 function initializeTyped() {
@@ -186,6 +186,8 @@ document.getElementById('linkd').addEventListener('click',function(){
   document.getElementById('gith').style.color='red';
 })
 
-document.getElementById('cv').addEventListener('mouseover',function(){
-  document.getElementById('cv1').innerHTML='View my cv'
-})
+document.addEventListener('DOMContentLoaded', function() {
+  // Add event listener for mouseover
+  document.getElementById('butcv').addEventListener('click', function() {
+      document.getElementById('cv1').innerHTML = 'View my cv';
+  }); });

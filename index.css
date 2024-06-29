@@ -16,7 +16,7 @@ html, body {
 #menu{
   margin-top: 0.2rem;
   margin-left: 1rem;
-  top: 1rem;
+  bottom: 1rem;
   position: fixed;
   height:30px;
   z-index: 10000;
@@ -28,7 +28,7 @@ html, body {
   margin-left: 1rem;
   top: 0.3rem;
   position: fixed;
-  display: block;
+  display: none;
   height:30px;
 }
 .hidden{
@@ -43,7 +43,7 @@ html, body {
 }
 .expandable-button {
   position: fixed;
-  top:.8rem;
+  top:2.3rem;
   padding-left: 0;
   right:0.0001rem;
   display: flex;
@@ -336,7 +336,7 @@ margin-left: 1rem;
   font-size: 20px;
   font-weight: 700;
   }
-
+  #menu1{display: none;}
   .construction{
     width: 15rem;
   }
@@ -447,7 +447,7 @@ margin-left: 1rem;
 
   #clr{
     position: fixed;
-    bottom: 1rem;
+    bottom: 1.3rem;
     height: 40px;
     width: 40px;
     font-weight: 800;
@@ -479,6 +479,7 @@ margin-left: 1rem;
     opacity: 1;
     margin-right: 5px;
     padding-top: 1.35rem;
+    margin-top: 2.3rem;
     /* padding-bottom: 2px; */
     /* padding-top: 10px; */
     
@@ -653,23 +654,36 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
     /* border-bottom: #240b36; */
     /* border-top: #240b36; */
 }
-
- #logo{
-  color: #f1f1f1;
+.x{
+  color: var(--txt);
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 500;
   font-style: normal;
-  font-size: xx-large;
+  font-size: large;
   padding: 10px;
-  text-align: center;
   top:0px;
+  right: 5px;
+  margin-top: 1px;
+  line-height: normal;
+  position: fixed;
+}
+ .logo{
+  color: var(--txt);
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  padding: 10px;
+  /* text-align: center; */
+  top:0px;
+  left: 5px;
   /* margin: 0 15px; */
-  margin-top: 20px;
+  margin-top: 1px;
   /* width:60%; */
   line-height: normal;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   
-  
+  position: fixed;
 
 }
 
@@ -861,7 +875,8 @@ header{
     font-family: "Advent Pro", sans-serif;
 }
 
-.name{color: var(--txt);}
+.name{color: var(--txt);
+  font-family: "Syne", sans-serif;}
 
 
 @keyframes slideUp {
@@ -940,12 +955,12 @@ header{
     transition: 100ms ease-in-out;
   }
 
-  #cv:hover{
+  /* #cv:hover{
     font-size: 14px;
     font-weight: 900;
     scale: 1.05;
     transition: 100ms ease-in-out;
-  }
+  } */
 /*   
   .noise-background {
     position: relative;
