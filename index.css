@@ -7,6 +7,7 @@ html, body {
 
 *{
   margin-top: 0;
+  padding-top: 0;
 }
 :root{
   --txt: #025a4e;
@@ -449,15 +450,16 @@ margin-left: 1rem;
   border-bottom: 3px solid #025a4e;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  display: none;
   /* border-radius: 10px; */
   }
   .under-nav{
-    margin-left: 6rem;
+    margin-left: 2rem;
   }
   .footer{
     /* margin-inline-start: auto; */
   margin-bottom: 1rem;
-  margin-left: 9.8rem;
+  margin-left: 2.8rem;
   font-weight: 300;
   }
   #contact {
@@ -484,8 +486,41 @@ margin-left: 1rem;
 
   } */
 
+  .logo{
+    z-index: 100000;
+  }
   .logo1{
     display: none;
+  }
+
+  .logo2 a:hover {
+    font-weight: 900;}
+  .logo2 a {
+    text-decoration: none;
+    color: var(--txt);
+    font-size: 22px;
+  }
+  .logo2{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    background-color: var(--backg);
+    color: var(--txt);
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  padding: 10px;
+  top:0px;
+  margin-top: 1px;
+  line-height: normal;
+  position: fixed;
+  user-select: none;
+  width: 100vw;
+  /* border-bottom: 2px solid var(--txt); */
+  /* border-radius: 3px; */
+
+  
   }
 
   #clr{
@@ -587,7 +622,7 @@ margin-left: 1rem;
 
 
 #home{
-  margin-top: 2rem;
+  margin-top: 4rem;
   scroll-margin-top: 150px; 
 }
 
@@ -1014,7 +1049,7 @@ header{
   #cv{
     letter-spacing: 1px;
     scale: 1;
-    transition: background-color 0.3s ease, padding 0.3s ease;
+    transition: background-color 0.1s ease, padding 0.1s ease;
   }
 
   #cv:hover {
@@ -1027,7 +1062,7 @@ header{
       transform: scale(1); /* Start at normal size */
     }
     to {
-      transform: scale(1.1); /* Scale up to 110% */
+      transform: scale(1.01); /* Scale up to 110% */
     }
   }
 
