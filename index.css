@@ -413,14 +413,13 @@ margin-left: 1rem;
     /* width:60%; */
     line-height: normal;
     /* justify-content: flex-start; */
-    
+    padding-top: 0.1rem;
     position: fixed;
     user-select: none;
     background-color: var(--backg);
     width: 100vw;
     top: 0rem;
     margin-top: 0;
-    padding-top: 0;
     text-align: center;
   
   }
