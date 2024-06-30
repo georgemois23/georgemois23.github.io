@@ -140,12 +140,12 @@ button{
 }
 
 
-#cv{
+.cv{
   
   border-radius: 88px 16px 44px 92px/32px 44px 66px 18px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
-/* #cv:hover{
+/* .cv:hover{
 background-color: var(--backg);
 color: var(--txt);
 } */
@@ -300,7 +300,10 @@ margin-left: 1rem;
 }
 
 
-
+.cv a{
+  text-decoration: none;
+  color: var(--backg);
+}
 
 
 /* small screens */
@@ -359,11 +362,19 @@ margin-left: 1rem;
     border-radius: 10px;
   }
 
+  .cv11{
+    display: none;
+  }
+
   #menu{
     visibility: hidden;
   }
-  #cv{
+  .cv{
     margin: 1rem ;
+  }
+
+  #cvbig{
+    display: none;
   }
 
 
@@ -474,15 +485,44 @@ margin-left: 1rem;
     /* height: 15rem; */
     /* width: 30vw; */
   }
-  #cv{
+  .cv{
     position: fixed;
     /* background: linear-gradient(170deg, rgba(49, 57, 73, 0.8), rgba(41, 48, 61, 0.6), rgba(31, 36, 46, 0.8), rgba(2, 90, 78, 0.8)), #025a4e; */
 
     bottom: 1rem;
     right: 1rem;
   }
+  #cvbig {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
 
-  /* #cv:hover{
+.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  #cvsmall{
+    display: none;
+  }
+  #cvv {
+    text-decoration: none;
+    color: var(--backg);
+    font-weight: 600;
+    border: 2px solid var(--txt);
+    border-radius: 10px;
+    margin-top: 1rem;
+    
+  }
+  .cv11{
+    margin-left: 1rem;
+  }
+
+  /* .cv:hover{
       text-decoration: underline;
       transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
       /* font-weight: bolder; *
@@ -504,6 +544,8 @@ margin-left: 1rem;
     color: var(--txt);
     font-size: 22px;
   }
+
+ 
   .logo2{
     display: flex;
     justify-content: center;
@@ -1064,13 +1106,13 @@ header{
     
   }
 
-  #cv{
+  .cv{
     letter-spacing: 1px;
     scale: 1;
     transition: background-color 0.1s ease, padding 0.1s ease;
   }
 
-  #cv:hover {
+  .cv:hover {
     padding: 19px 22px; /* Slightly larger padding on hover */
   }
   
@@ -1084,7 +1126,7 @@ header{
     }
   }
 
-  /* #cv:hover{
+  /* .cv:hover{
     font-size: 14px;
     font-weight: 900;
     scale: 1.05;

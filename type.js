@@ -16,6 +16,80 @@ document.addEventListener('DOMContentLoaded', (event) => {
     closeMenu.style.display = 'none';
   });
 });
+ 
+document.getElementById('projectsid').addEventListener('mouseover',function(){
+  document.getElementById('projectsid').style.fontWeight=900;
+})
+document.getElementById('projectsid').addEventListener('mouseout',function(){
+  document.getElementById('projectsid').style.fontWeight=500;
+})
+document.addEventListener('DOMContentLoaded', (event) => {
+  const targetDiv = document.getElementById('projects');
+  const cvBig = document.getElementById('cvbig');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              document.getElementById('projectsid').style.fontWeight=900;
+              document.getElementById('homeid').style.fontWeight=500;
+              cvBig.classList.add('hide');
+              cvBig.classList.remove('show');
+          } else {
+            document.getElementById('projectsid').style.fontWeight=500;
+              cvBig.classList.add('show');
+              cvBig.classList.remove('hide');
+          }
+      });
+  }, {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.4 // Trigger when at least 70% of the target is in view
+  });
+
+  observer.observe(targetDiv);
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+  const targetDiv = document.getElementById('home');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              document.getElementById('homeid').style.fontWeight=900;
+              document.getElementById('cvbig').classList.add('show');
+          } else {
+            document.getElementById('homeid').style.fontWeight=500;
+          }
+      });
+  }, {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.4 // Trigger when at least 70% of the target is in view
+  });
+
+  observer.observe(targetDiv);
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+  const targetDiv = document.getElementById('contact');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              document.getElementById('contactid').style.fontWeight=900;
+              document.getElementById('projectsid').style.fontWeight=500;
+              document.getElementById('cvbig').classList.add('show');
+          } else {
+            document.getElementById('contactid').style.fontWeight=500;
+
+          }
+      });
+  }, {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.4 // Trigger when at least 70% of the target is in view
+  });
+
+  observer.observe(targetDiv);
+});
 
 
 document.querySelector('.logo').addEventListener('mouseover',function(){
@@ -40,20 +114,20 @@ document.querySelector('.x').addEventListener('mouseout',function(){
   document.querySelector('.x').style.fontWeight='500';
 });
 
-document.getElementById('cv').addEventListener('mouseover', function() {
+document.querySelector('.cv').addEventListener('mouseover', function() {
   document.getElementById('cv1').innerHTML = 'View my CV';
 });
 
-document.getElementById('cv').addEventListener('mouseout', function() {
+document.querySelector('.cv').addEventListener('mouseout', function() {
   document.getElementById('cv1').innerHTML = 'CV';
 });
 
 // JavaScript to add class for scaling animation
-document.getElementById('cv').addEventListener('mouseover', function() {
+document.querySelector('.cv').addEventListener('mouseover', function() {
   this.classList.add('hovered');
 });
 
-document.getElementById('cv').addEventListener('mouseout', function() {
+document.querySelector('.cv').addEventListener('mouseout', function() {
   this.classList.remove('hovered');
 });
 
@@ -170,7 +244,7 @@ document.getElementById('clr').addEventListener('click', function() {
 });
 
 // Open CV
-document.getElementById('cv').addEventListener('click', function() {
+document.getElementById('cvsmall').addEventListener('click', function() {
   window.open('/Moysiadis_George.pdf', '_blank');
 });
 
