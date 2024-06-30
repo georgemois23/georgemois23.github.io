@@ -370,6 +370,8 @@ margin-left: 1rem;
     height: 50px;
     padding-left: 0.1rem;}
 
+    .expandable-button > .arrow{
+      margin-block: 2.2rem;}
   .expandable-button.expanded{
     width: 60px;
     height: 50px;
@@ -384,7 +386,7 @@ margin-left: 1rem;
   .expandable-button.expanded #clr {
     opacity: 1;
     margin-right: 10px;
-    margin-block: 15px;
+    margin-block: 2.2rem;
     /* border: 4px solid black; */
     /* padding-bottom: 2px; */
     /* padding-top: 10px; */
@@ -397,13 +399,33 @@ margin-left: 1rem;
     padding-block: auto;
   }
 
-  .logo{
+
+
+  .logo1{
+    color: var(--txt);
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    padding: 10px;
+    /* text-align: center; */
+    /* margin: 0 15px; */
+    /* width:60%; */
+    line-height: normal;
+    /* justify-content: flex-start; */
+    
+    position: fixed;
+    user-select: none;
     background-color: var(--backg);
     width: 100vw;
     top: 0rem;
     margin-top: 0;
     padding-top: 0;
     text-align: center;
+  
+  }
+  .logo{
+    display: none;
   }
 
   .x{
@@ -463,12 +485,17 @@ margin-left: 1rem;
 
   } */
 
+  .logo1{
+    display: none;
+  }
+
   #clr{
     position: fixed;
-    bottom: 1.3rem;
+    top: 3rem;
     height: 40px;
     width: 40px;
     font-weight: 800;
+    margin-top: 1rem;
     border: none;
     box-sizing: none;
     box-shadow: none;
@@ -479,6 +506,7 @@ margin-left: 1rem;
     /* border-radius: 16px; */
   }
   .expandable-button:hover{
+    top: 2.3rem;
     width: 50px;
     height: 80px;
     color: transparent;
@@ -497,7 +525,7 @@ margin-left: 1rem;
     opacity: 1;
     margin-right: 5px;
     padding-top: 1.35rem;
-    margin-top: 2.3rem;
+    margin-top: 2.1rem;
     /* padding-bottom: 2px; */
     /* padding-top: 10px; */
     
