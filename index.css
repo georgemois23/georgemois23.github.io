@@ -422,6 +422,7 @@ margin-left: 1rem;
     top: 0rem;
     margin-top: 0;
     text-align: center;
+    z-index: 10000;
   
   }
   .logo{
@@ -489,6 +490,7 @@ margin-left: 1rem;
   .logo{
     z-index: 100000;
   }
+  
   .logo1{
     display: none;
   }
@@ -512,13 +514,14 @@ margin-left: 1rem;
   font-size: large;
   padding: 10px;
   top:0px;
-  margin-top: 1px;
+  margin-top: 0px;
+  padding-top: .4rem;
   line-height: normal;
   position: fixed;
   user-select: none;
   width: 100vw;
   /* border-bottom: 2px solid var(--txt); */
-  /* border-radius: 3px; */
+  border-radius: 30rem;
 
   
   }
@@ -694,11 +697,11 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
   scale: 1.1;
 }
 #imgg1{
-  transition: 900ms ease-out;
+  /* transition: 900ms ease-out; */
   scale: 1;
 }
 #img{
-  transition: 200ms ease-out;
+  /* transition: 900ms ease-in; */
   scale: 1;
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
