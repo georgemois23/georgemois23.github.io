@@ -5,6 +5,9 @@ html, body {
   overflow-x: hidden;
 }
 
+*{
+  margin-top: 0;
+}
 :root{
   --txt: #025a4e;
   --txt-scn: #2e615e;
@@ -397,7 +400,10 @@ margin-left: 1rem;
   .logo{
     background-color: var(--backg);
     width: 100vw;
-    top: 0;
+    top: 0rem;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
   }
 
   .x{
