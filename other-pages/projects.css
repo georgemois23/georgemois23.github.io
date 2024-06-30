@@ -4,6 +4,10 @@ background: linear-gradient(123deg, rgba(0,0,128,0.8996848739495799) 13%, rgba(1
 height: 100%;
 } */
 
+*{
+  display: none;
+}
+
 @media all and (min-width:570px) {
   .navigation  {
     gap: 50px;

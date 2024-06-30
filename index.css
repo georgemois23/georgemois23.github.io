@@ -36,9 +36,11 @@ html, body {
 
 }
 .arrow{
+  /* font-family: "Sedgwick Ave Display", cursive; */
   transform: rotate(-90deg);
   display: flex;
   padding-bottom: 1.4rem;
+  /* margin-left: 0.3rem; */
   font-size: 26px;
 }
 .expandable-button {
@@ -395,6 +397,7 @@ margin-left: 1rem;
   .logo{
     background-color: var(--backg);
     width: 100vw;
+    top: 0;
   }
 
   .x{
