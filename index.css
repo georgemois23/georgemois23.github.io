@@ -464,6 +464,8 @@ margin-left: 1rem;
   font-weight: 300;
   }
   #contact {
+    display: flex;
+    justify-content: center;
     margin-top: 6rem;
     scroll-margin-top: 150px; 
   }
@@ -657,11 +659,22 @@ align-items: center;
     /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)) ; */
 }
 .git{
+  display: block;
+  margin-inline: auto;
   /* grid-row: span 2; */
   /* grid-column: span 2; */
   /* justify-self: center; */
   align-self: center;
   text-align: center;
+}
+
+.git > a{
+  display: block;
+  margin-inline: auto;
+}
+.linkedin > a{
+  display: block;
+  margin-inline: auto;
 }
 .linkedin{
   /* grid-row: span 2; */
@@ -677,6 +690,7 @@ a[href="https://www.github.com/georgemois23"]  {
   display: block;
   text-align: center;
   height: 100px;
+  width: 10px;
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
   margin: 0 auto;
@@ -708,6 +722,7 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   display: block;
   text-align: center;
   height: 50px;
+  width: 10px;
 }
 #projects{
   margin-top: 8rem;
