@@ -315,7 +315,7 @@ margin-left: 1rem;
     animation: slideUp 0.5s ease-out forwards;
     /* flex-direction: column; */
     bottom: 0;
-    height: 3rem;
+    height: 2.8rem;
     align-items: center;
     width: 100vw;
     gap:3rem;
@@ -621,7 +621,7 @@ margin-left: 1rem;
     /* flex-wrap: wrap; */
     /* flex-direction: column; */
     bottom: 0;
-    height: 3rem;
+    /* height: 3rem; */
     width: 100vw;
     align-items: center;
     gap: 25px;
@@ -652,7 +652,7 @@ margin-left: 1rem;
     display:flex;
     text-align: center;
     bottom: 0;
-    height: 3rem;
+    /* height: 3rem; */
     width: 100vw;
     align-items: center;
     gap: 10px;
