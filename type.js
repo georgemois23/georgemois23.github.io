@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           if (entry.isIntersecting) {
               document.getElementById('projectsid').style.fontWeight=900;
               document.getElementById('homeid').style.fontWeight=500;
+              document.getElementById('contactid').style.fontWeight=500;
               cvBig.classList.add('hide');
               cvBig.classList.remove('show');
           } else {
