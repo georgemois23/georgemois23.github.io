@@ -3,6 +3,7 @@
     --txt-scn: #2e615e;
     --backg: #ede9de;
     --backg-scn: #e3ddce;
+    --basic-txt: #2a2827;
   
   }
 .x{
@@ -14,7 +15,7 @@
 
 .x a{
     text-decoration: none;
-    color: var(--backg);
+    color: var(--backg);;
 }
 
 .x:hover{
@@ -35,6 +36,7 @@ embed{
 
 body {
     font-family: Arial, sans-serif;
+    color: var(--basic-txt);
 }
 
 .section-title {
