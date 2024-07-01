@@ -221,7 +221,9 @@ color: var(--txt);
 
 
 .navigation a {
-  font-family: "Advent Pro", sans-serif;
+  /* font-family: "Advent Pro", sans-serif; */
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
   /* display: block; */
@@ -233,7 +235,7 @@ color: var(--txt);
   /* padding-top: 10px; */
   /* color: darkmagenta;  */
   color: var(--txt);
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   font-size: 28px;
   transition: all 250ms ease;
@@ -671,6 +673,7 @@ margin-left: 1rem;
 #home{
   margin-top: 4rem;
   scroll-margin-top: 150px; 
+  /* margin-bottom: 3rem; */
 }
 
 
