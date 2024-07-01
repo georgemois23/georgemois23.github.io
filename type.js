@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
  
+document.getElementById('hid').addEventListener('click',function(){
+  document.getElementById('hid').style.display='none';
+ 
+})
 document.getElementById('projectsid').addEventListener('mouseover',function(){
   document.getElementById('projectsid').style.fontWeight=900;
 })
@@ -131,7 +135,7 @@ document.querySelector('.cv').addEventListener('mouseover', function() {
 document.querySelector('.cv').addEventListener('mouseout', function() {
   this.classList.remove('hovered');
 });
-
+document.querySelector('.course').classList.add('hiddencourse');
 // Function to initialize Typed
 function initializeTyped() {
   if (!sessionStorage.getItem('typedInitialized')) {
@@ -143,20 +147,23 @@ function initializeTyped() {
               sessionStorage.setItem('typedText2', document.querySelector(".auto-type2").textContent);
 
               var typed3 = new Typed(".auto-type3", {
-                  strings: ["My name is George Moysiadis, I am from Greece and I am a"],
+                  strings: ["My name is George Moysiadis, I am from Greece and I am a "],
                   typeSpeed: 50,
                   loop: false,
                   onComplete: function() {
                       sessionStorage.setItem('typedText3', document.querySelector(".auto-type3").textContent);
 
                       var typed4 = new Typed(".auto-type4", {
-                          strings: ["web developer.", "student of Computer Science."],
+                          strings: [" web developer.", " student of Computer Science."],
                           typeSpeed: 100,
                           backSpeed: 60,
                           loop: false,
                           onComplete: function() {
-                              sessionStorage.setItem('typedText4', document.querySelector(".auto-type4").textContent);
+                              sessionStorage.setItem('typedText4',' '+ document.querySelector(".auto-type4").textContent);
                               sessionStorage.setItem('typedInitialized', 'true');
+                              var element = document.querySelector('.course');
+        element.classList.remove('hiddencourse');
+        element.classList.add('fade-incourse');
                           }
                       });
                   }
@@ -166,7 +173,16 @@ function initializeTyped() {
   } else {
       document.querySelector(".auto-type2").textContent = sessionStorage.getItem('typedText2');
       document.querySelector(".auto-type3").textContent = sessionStorage.getItem('typedText3');
-      document.querySelector(".auto-type4").textContent = sessionStorage.getItem('typedText4');
+      // Explicitly set the text content with space preservation
+      const typedText4 = sessionStorage.getItem('typedText4');
+      if (typedText4) {
+          document.querySelector(".auto-type4").textContent = typedText4;
+          var element = document.querySelector('.course');
+        element.classList.remove('hiddencourse');
+        element.style.display='block';
+      } else {
+          document.querySelector(".auto-type4").textContent = " web developer.";
+      }
   }
 }
 
