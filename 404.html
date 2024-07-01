@@ -13,7 +13,10 @@
 
     html{
     /* resize: none; */
-    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100svh; */
     background-color:#025a4e;
     overflow-y: auto;
     /* overflow: hidden; */
@@ -23,11 +26,12 @@
     }
 
     
+    
 
 @keyframes blinker {
   90% {
-    opacity: 0.9;
-    /* delay: 1s; */
+    opacity: 0.4;
+    delay: 1s;
     /* color: black; */
   }
 }
@@ -45,7 +49,7 @@
         font-size: 24px;
     }
     .ddiv{
-        padding-top: 10px;
+        /* padding-top: 10px; */
         
     }
     a{
@@ -54,16 +58,31 @@
         font-weight: bolder;
         font-style:italic;
     }
-
+    .text{
+        
+        /* margin-bottom: 9rem; */
+    }
     a:hover{
         text-decoration: underline;
         transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
         font-weight: bolder;}
+        @media all and (max-width:620px) {
+.fff{ font-size: 130px;
+   }}
+        @media all and (max-width:300px) {
+.fff{ font-size: 70px;
+   }
+  }
+        @media all and (max-width:160px) {
+.fff{ font-size: 40px;
+   }
+  }
 </style>
 <body>
     <h1 class="fff">404</h1>
+    <div class="text">
     <div>The link you clicked may be broken or the page may have burst.</div>
-    <div class="ddiv">Visit the <a href="/" target="_parent">home</a> page</div>
+    <div class="ddiv">Visit the <a href="/" target="_parent">home</a> page</div></div>
    
 
 </body>
