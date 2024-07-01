@@ -385,7 +385,7 @@ margin-left: 1rem;
     padding-left: 0.1rem;}
 
     .expandable-button > .arrow{
-      margin-block: 2.2rem;}
+      margin-bottom: .1rem;}
   .expandable-button.expanded{
     width: 60px;
     height: 50px;
