@@ -283,7 +283,7 @@ hr {
 
 .hh{
   color: var(--txt);
-margin-left: 1rem;
+/* margin-left: 1rem; */
 }
 
 
@@ -337,6 +337,8 @@ margin-left: 1rem;
     min-height: 100vh;
     
   }
+
+  
   #contact {
     margin-top: 6rem;
     scroll-margin-top: 10px; 
@@ -468,7 +470,8 @@ margin-left: 1rem;
   /* border-radius: 10px; */
   }
   .under-nav{
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    text-align: center;
   }
   .footer{
     /* margin-inline-start: auto; */
@@ -671,16 +674,16 @@ margin-left: 1rem;
 
 
 #home{
-  margin-top: 4rem;
+  margin-top: 6rem;
   scroll-margin-top: 150px; 
   height: 400px;
-  /* margin-bottom: 3rem; */
+  margin-bottom: 9rem;
 }
 
 
 .h{
   color: var(--txt);
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   font-family: "Gloria Hallelujah", cursive;
     font-weight: 400;
     font-style: normal;
@@ -730,16 +733,17 @@ align-items: center;
   text-align: center;
 }
 a[href="https://www.github.com/georgemois23"] #imgg {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 a[href="https://www.github.com/georgemois23"]  {
   display: block;
   text-align: center;
+  margin-left: auto;
   height: 100px;
   width: 10px;
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .insta{
   text-decoration: none;
@@ -766,14 +770,16 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"] #imgg {
 }
 a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   display: block;
+  margin-inline: auto;
   text-align: center;
   height: 50px;
   width: 10px;
 }
 #projects{
   margin-top: 8rem;
-  scroll-margin-top: 50px; 
+  scroll-margin-top: 60px; 
   /* width: 100vw; */
+  text-align: center;
   height: 500px;
   /* border: 2px solid black; */
 }
@@ -1014,7 +1020,8 @@ header{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black;
+  /* background: black; */
+  background: var(--backg);
 }
 
 /* Handle */
@@ -1026,6 +1033,8 @@ header{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--txt);
 }
+
+
 .hh1{
     /* padding-top: 20px;
     padding-left: 10px; */
