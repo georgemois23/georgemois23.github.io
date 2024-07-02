@@ -353,6 +353,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
 
+        window.addEventListener('scroll', () => {
+          contextMenu.style.visibility = "hidden";
+      });
+
         document.getElementById('lnkd').addEventListener('click',function(){
           window.open('https://www.linkedin.com/in/george-moysiadis/','_blank');
         });

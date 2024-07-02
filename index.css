@@ -1057,12 +1057,18 @@ header{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  /* background: black; */
-  background: var(--backg);
+  background: black;
+  /* background: red; */
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  border: 1px solid black;
+    border-radius: 100px;
   background: var(--txt);
 }
 
