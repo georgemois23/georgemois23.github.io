@@ -156,7 +156,7 @@ a{
     background: var(--backg);
     color: var(--txt);
   }
-  .content .item span{
+  .content .item div{
     margin-left: 8px;
     font-size: 19px;
     
@@ -168,7 +168,7 @@ a{
     border-top: 1px solid #ccc;
   }
 
-  hover-container {
+  #hover-container {
             display: flex;
             align-items: center;
         }
@@ -179,9 +179,18 @@ a{
         #hover-container:hover a {
             color: var(--txt); /* Hover color */
         }
-        
-
-  
+  #hover-container1 {
+            display: flex;
+            align-items: center;
+        }
+        #hover-container1 a {
+            color: var(--backg);
+            text-decoration: none;
+        }
+        #hover-container1:hover a {
+            color: var(--txt); /* Hover color */
+        }
+      
  
 </style>
 <body>
@@ -277,27 +286,27 @@ a{
     <div class="wrapper">
         <div class="content">
           <ul class="menu">
+            <li class="item" id="hover-container1">
+                <i class="uil uil-eye"></i>
+                <div><a href="mailto:moisiadisgeorge23@gmail.com">Email me</a></div>
+              </li>
             <li class="item">
               <i class="uil uil-eye"></i>
-              <span>Email me</span>
-            </li>
-            <li class="item">
-              <i class="uil uil-eye"></i>
-              <span id="githubb">GitHub</span>
+              <div id="githubb">GitHub</div>
             </li>
             
             <li class="item">
               <i class="uil uil-link-alt"></i>
-              <span id="lnkd">LinkedIn</span>
+              <div id="lnkd">LinkedIn</div>
             </li>
             
             <li class="item" id="hover-container">
               <i class="uil uil-trash-alt"></i>
-              <span id="viewmycv"><a href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></span>
+              <div id="viewmycv"><a href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></div>
             </li>
             <li class="item">
                 <i class="uil uil-edit"></i>
-                <span id="backtohome">Back to home</span>
+                <div id="backtohome">Back to home</div>
               </li>
           </ul>
 

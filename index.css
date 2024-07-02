@@ -1304,3 +1304,15 @@ header{
     text-decoration: none;
     color: var(--backg);
   }
+
+  #hover-container {
+    display: flex;
+    align-items: center;
+}
+#hover-container a {
+    color: var(--backg);
+    text-decoration: none;
+}
+#hover-container:hover a {
+    color: var(--txt); /* Hover color */
+}
