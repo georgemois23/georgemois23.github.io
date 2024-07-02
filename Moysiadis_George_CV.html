@@ -126,6 +126,62 @@ a{
 .lefttt{
     text-align: left;
 }
+
+.wrapper{
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    border-radius: 10px;
+    background: var(--txt);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    color: var(--backg);
+  }
+  .wrapper .menu{
+    padding: 10px 12px;
+  }
+  .content .item{
+    list-style: none;
+    font-size: 22px;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 0 5px 0 10px;
+  }
+  .content .item:hover{
+    background: var(--backg);
+    color: var(--txt);
+  }
+  .content .item span{
+    margin-left: 8px;
+    font-size: 19px;
+    
+  }
+  .content .setting{
+    display: flex;
+    margin-top: -5px;
+    padding: 5px 12px;
+    border-top: 1px solid #ccc;
+  }
+
+  hover-container {
+            display: flex;
+            align-items: center;
+        }
+        #hover-container a {
+            color: var(--backg);
+            text-decoration: none;
+        }
+        #hover-container:hover a {
+            color: var(--txt); /* Hover color */
+        }
+        
+
+  
+ 
 </style>
 <body>
     <div class="logo">Moysiadis George</div>
@@ -217,11 +273,75 @@ a{
         <p><b>Basic in:</b> PHP, SQL</p>
     </div>
     <!-- <embed src="/Moysiadis_George.pdf" width="800px" height="2100px" /> -->
-   
+    <div class="wrapper">
+        <div class="content">
+          <ul class="menu">
+            <li class="item">
+              <i class="uil uil-eye"></i>
+              <span>Email me</span>
+            </li>
+            <li class="item">
+              <i class="uil uil-eye"></i>
+              <span id="githubb">GitHub</span>
+            </li>
+            
+            <li class="item">
+              <i class="uil uil-link-alt"></i>
+              <span id="lnkd">LinkedIn</span>
+            </li>
+            
+            <li class="item" id="hover-container">
+              <i class="uil uil-trash-alt"></i>
+              <span id="viewmycv"><a href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></span>
+            </li>
+            <li class="item">
+                <i class="uil uil-edit"></i>
+                <span id="backtohome">Back to home</span>
+              </li>
+          </ul>
 
 
 
     </div>
+    <script>const contextMenu = document.querySelector(".wrapper");
+        const navbar = document.querySelector(".logo2");
+        const margin = 15; // Space from the edges of the viewport
+
+        window.addEventListener("contextmenu", e => {
+            e.preventDefault();
+            let x = e.pageX, y = e.pageY,
+                winWidth = window.innerWidth,
+                winHeight = window.innerHeight,
+                cmWidth = contextMenu.offsetWidth,
+                cmHeight = contextMenu.offsetHeight,
+                navbarHeight = navbar.offsetHeight;
+
+            // Adjust y position if the click is near the top of the page, below the navbar
+            if (y < navbarHeight + margin) {
+                y = navbarHeight + margin; // Add margin from the navbar
+            }
+
+            // Ensure the context menu does not overflow the window boundaries
+            x = (x + cmWidth > winWidth + window.scrollX - margin) ? winWidth + window.scrollX - cmWidth - margin : x;
+            y = (y + cmHeight > winHeight + window.scrollY - margin) ? winHeight + window.scrollY - cmHeight - margin : y;
+            
+            contextMenu.style.left = `${x}px`;
+            contextMenu.style.top = `${y}px`;
+            contextMenu.style.visibility = "visible";
+        });
+
+        document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
+        document.getElementById('lnkd').addEventListener('click',function(){
+          window.open('https://www.linkedin.com/in/george-moysiadis/','_blank');
+        });
+        document.getElementById('githubb').addEventListener('click',function(){
+          window.open('https://www.github.com/georgemois23','_blank');
+        });
+        document.getElementById('backtohome').addEventListener('click',function(){
+          window.open('/','_self');
+        });
+    </script>
     <script src="type.js"></script>
 </body>
 </html>
