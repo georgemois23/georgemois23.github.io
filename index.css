@@ -371,6 +371,9 @@ hr {
     width: 15rem;
   }
 
+  .course{
+    margin: 0 .01rem;
+  }
   #clr{
     opacity: 0;
     visibility: hidden;
@@ -583,6 +586,7 @@ hr {
     justify-content: center;
     gap: 4rem;
     background-color: var(--backg);
+
     color: var(--txt);
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 500;
@@ -602,6 +606,9 @@ hr {
   
   }
 
+  .course{
+    margin: 0 4rem;
+  }
   #clr{
     position: fixed;
     top: 3rem;
@@ -845,7 +852,7 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   line-height: normal;
   position: fixed;
   user-select: none;
-  display: block;
+  
   z-index: 1000000000;
 }
 
@@ -1252,4 +1259,48 @@ header{
     .navigation {
       display: none;
     }
+  }
+  .wrapper{
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    border-radius: 10px;
+    background: var(--txt);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    color: var(--backg);
+  }
+  .wrapper .menu{
+    padding: 10px 12px;
+  }
+  .content .item{
+    list-style: none;
+    font-size: 22px;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 0 5px 0 10px;
+  }
+  .content .item:hover{
+    background: var(--backg);
+    color: var(--txt);
+  }
+  .content .item span{
+    margin-left: 8px;
+    font-size: 19px;
+    
+  }
+  .content .setting{
+    display: flex;
+    margin-top: -5px;
+    padding: 5px 12px;
+    border-top: 1px solid #ccc;
+  }
+
+  .wrapper > a{
+    text-decoration: none;
+    color: var(--backg);
   }

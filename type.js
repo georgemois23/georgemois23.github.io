@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }, {
       root: null, // Use the viewport as the root
       rootMargin: '0px',
-      threshold: 0.4 // Trigger when at least 70% of the target is in view
+      threshold: 0.3 // Trigger when at least 70% of the target is in view
   });
 
   observer.observe(targetDiv);
@@ -237,7 +237,9 @@ handleMediaQueryChange(mediaQuery);
 // Προσθέστε έναν listener για τις αλλαγές
 mediaQuery.addEventListener('change', handleMediaQueryChange);
 // Color Scheme toggle
-document.getElementById('clr').addEventListener('click', function() {
+document.getElementById('clr').addEventListener('click',changecolor);
+
+function changecolor() {
   const currentTxtColor = getComputedStyle(document.documentElement).getPropertyValue('--txt').trim();
   if (currentTxtColor !== '#ede7de') {
       document.documentElement.style.setProperty('--txt', '#ede7de');
@@ -258,8 +260,7 @@ document.getElementById('clr').addEventListener('click', function() {
       document.getElementById('menu').src = '/other-pages/minimize_.svg';
       localStorage.setItem('colorScheme', 'light');
   }
-});
-
+}
 // Open CV
 document.getElementById('cvsmall').addEventListener('click', function() {
   window.open('/Moysiadis_George.pdf', '_blank');
@@ -322,3 +323,44 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('butcv').addEventListener('click', function() {
       document.getElementById('cv1').innerHTML = 'View my cv';
   }); });
+
+  const contextMenu = document.querySelector(".wrapper");
+        const navbar = document.querySelector(".logo2");
+        const margin = 15; // Space from the edges of the viewport
+
+        window.addEventListener("contextmenu", e => {
+            e.preventDefault();
+            let x = e.pageX, y = e.pageY,
+                winWidth = window.innerWidth,
+                winHeight = window.innerHeight,
+                cmWidth = contextMenu.offsetWidth,
+                cmHeight = contextMenu.offsetHeight,
+                navbarHeight = navbar.offsetHeight;
+
+            // Adjust y position if the click is near the top of the page, below the navbar
+            if (y < navbarHeight + margin) {
+                y = navbarHeight + margin; // Add margin from the navbar
+            }
+
+            // Ensure the context menu does not overflow the window boundaries
+            x = (x + cmWidth > winWidth + window.scrollX - margin) ? winWidth + window.scrollX - cmWidth - margin : x;
+            y = (y + cmHeight > winHeight + window.scrollY - margin) ? winHeight + window.scrollY - cmHeight - margin : y;
+            
+            contextMenu.style.left = `${x}px`;
+            contextMenu.style.top = `${y}px`;
+            contextMenu.style.visibility = "visible";
+        });
+
+        document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
+        document.getElementById('lnkd').addEventListener('click',function(){
+          window.open('https://www.linkedin.com/in/george-moysiadis/','_blank');
+        });
+        document.getElementById('githubb').addEventListener('click',function(){
+          window.open('https://www.github.com/georgemois23','_blank');
+        });
+        document.getElementById('viewmycv').addEventListener('click',function(){
+          window.open('/Moysiadis_George_CV.html','_self');
+        });
+        document.getElementById('changetheme').addEventListener('click',changecolor);
+
