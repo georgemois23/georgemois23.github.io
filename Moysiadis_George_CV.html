@@ -135,6 +135,7 @@ a{
     background: var(--txt);
     box-shadow: 0 12px 35px rgba(0,0,0,0.1);
     color: var(--backg);
+    z-index: 200000;
   }
   .wrapper .menu{
     padding: 10px 12px;
@@ -198,6 +199,33 @@ a{
  
 </style>
 <body>
+    <div class="wrapper">
+        <div class="content">
+          <ul class="menu">
+            <li class="item" id="hover-container1">
+                <i class="uil uil-eye"></i>
+                <div><a href="mailto:moisiadisgeorge23@gmail.com">Email me</a></div>
+              </li>
+            <li class="item">
+              <i class="uil uil-eye"></i>
+              <div id="githubb">GitHub</div>
+            </li>
+            
+            <li class="item">
+              <i class="uil uil-link-alt"></i>
+              <div id="lnkd">LinkedIn</div>
+            </li>
+            
+            <li class="item" id="hover-container">
+              <i class="uil uil-trash-alt"></i>
+              <div id="viewmycv"><a href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></div>
+            </li>
+            <li class="item">
+                <i class="uil uil-edit"></i>
+                <div id="backtohome">Back to home</div>
+              </li>
+          </ul>
+          </div></div>
     <div class="logo">Moysiadis George</div>
         <div class="logo1">Moysiadis George</div>
     <div class="logo2">
@@ -287,36 +315,11 @@ a{
         <p><b>Basic in:</b> PHP, SQL</p>
     </div>
     <!-- <embed src="/Moysiadis_George.pdf" width="800px" height="2100px" /> -->
-    <div class="wrapper">
-        <div class="content">
-          <ul class="menu">
-            <li class="item" id="hover-container1">
-                <i class="uil uil-eye"></i>
-                <div><a href="mailto:moisiadisgeorge23@gmail.com">Email me</a></div>
-              </li>
-            <li class="item">
-              <i class="uil uil-eye"></i>
-              <div id="githubb">GitHub</div>
-            </li>
-            
-            <li class="item">
-              <i class="uil uil-link-alt"></i>
-              <div id="lnkd">LinkedIn</div>
-            </li>
-            
-            <li class="item" id="hover-container">
-              <i class="uil uil-trash-alt"></i>
-              <div id="viewmycv"><a href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></div>
-            </li>
-            <li class="item">
-                <i class="uil uil-edit"></i>
-                <div id="backtohome">Back to home</div>
-              </li>
-          </ul>
+    
 
 
 
-    </div>
+    
     <script>const contextMenu = document.querySelector(".wrapper");
         const navbar = document.querySelector(".logo2");
         const margin = 15; // Space from the edges of the viewport

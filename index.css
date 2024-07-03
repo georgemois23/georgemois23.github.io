@@ -446,6 +446,14 @@ hr {
   margin-top: 1rem;
  }
 
+ #viewmycv1{
+  display: none;
+ }
+
+ #downhover-container{
+  display: block;
+ }
+
   .logo1{
     color: var(--txt);
     font-family: "Sedgwick Ave Display", cursive;
@@ -665,7 +673,10 @@ hr {
     margin-top: 6rem;
     scroll-margin-top: 45px; 
   }
-  
+
+  .divhidedownload{
+    display: none;
+  }
 } 
 @media all and (max-width:430px) {
   .navigation  {
@@ -1345,5 +1356,16 @@ header{
     text-decoration: none;
 }
 #hover-container:hover a {
+    color: var(--txt); /* Hover color */
+}
+  #downhover-container {
+    display: flex;
+    align-items: center;
+}
+#downhover-container a {
+    color: var(--backg);
+    text-decoration: none;
+}
+#downhover-container:hover a {
     color: var(--txt); /* Hover color */
 }
