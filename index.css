@@ -358,7 +358,7 @@ hr {
   
   #contact {
     margin-top: 6rem;
-    scroll-margin-top: 10px; 
+    scroll-margin-top: 85px; 
   }
   .footer{
     /* margin: 0 3rem; */
@@ -651,12 +651,21 @@ hr {
     
     
   }
+  #projects{
+    margin-top: 3rem;
+    scroll-margin-top: 5px;
+  }
   #home{
     margin-top: 6rem;
     scroll-margin-top: 150px; 
     height: 600px;
     margin-bottom: 9rem;
   }
+  #contact {
+    margin-top: 6rem;
+    scroll-margin-top: 45px; 
+  }
+  
 } 
 @media all and (max-width:430px) {
   .navigation  {
@@ -681,6 +690,13 @@ hr {
     height: 15rem;
   }
 }
+@media all and (max-width:390px) {
+  #contact {
+    margin-top: 6rem;
+    scroll-margin-top: 45px; 
+  }
+  }
+
 @media all and (max-width:340px) {
   .construction  {
     /* font-size: larger; */}
@@ -710,6 +726,11 @@ hr {
   .navigation a{
     flex-shrink: 3;
   }
+
+  #contact {
+    margin-top: 6rem;
+    scroll-margin-top: 45px; 
+  }
   }
 
 
@@ -732,10 +753,12 @@ align-items: center;
  width: 10px;
 }
 .txt-color{
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 900;
   margin-top: 2em;
   padding-top: auto;
   overflow: hidden;
-  font-size: x-large;
+  font-size: 45px;
   color:  var(--txt);
   display: block;
   /* flex-wrap: wrap; */
@@ -743,6 +766,7 @@ align-items: center;
     /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)) ; */
 }
 .git{
+  margin-bottom: 1rem;
   display: block;
   margin-inline: auto;
   /* grid-row: span 2; */
@@ -1274,6 +1298,7 @@ header{
     background: var(--txt);
     box-shadow: 0 12px 35px rgba(0,0,0,0.1);
     color: var(--backg);
+    z-index: 200000;
   }
   .wrapper .menu{
     padding: 10px 12px;
