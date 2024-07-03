@@ -366,6 +366,7 @@ a{
         window.onload = () => {
    if (window.innerWidth <= 756) {
     document.querySelector('body').style.display='none';
+    alert('CV is downloading!');
     document.getElementById('downloadd').click();
     setTimeout(() => {
         window.open('/','_self');
