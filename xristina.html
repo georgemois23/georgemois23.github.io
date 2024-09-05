@@ -6,11 +6,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
     <title>Για το Χριστινάκι μουυ</title>
     <link rel="stylesheet" href="index.css">
     <style>
         *{
-            padding-top: 3rem;
+            padding-top: 1rem;
             color: #025a4e;
             text-align: center;
             /* font-family: 'Courier New', Courier, monospace; */
@@ -40,14 +43,197 @@
             border-radius: 15px;
             user-select: none;
         }
+
+        #popup{
+            display: flex;
+            justify-content: center;
+        }
+        #answer{
+            background-color: #ede9de;
+            /* height: 10px; */
+            border-radius: 20px;
+            border-color: #025a4e;
+            height: 40px; /* Adjust the height as needed */
+            width: 160px;
+            line-height: 40px; /* Should match the height to center the text vertically */
+            padding: 0 10px; /* Adjust padding for horizontal centering */
+            box-sizing: border-box;
+            font-size: 16px; /* Adjust font size as needed */
+            /* border: 1px solid #ccc; */
+            border-radius: 5px;
+            
+        }
+
+        #answer:focus{
+            border-color: #025a4e;
+            outline: none;
+        }
+        
+        #quiz-container p{
+            font-family: "Mynerve", cursive;
+        }
+        #quiz-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            
+        }
+
+        #quiz-container> *{
+            font-family: "Mynerve", cursive;
+        }
+
+        #gkounanta{
+            display: block;
+            /* min-width: 100px; */
+            /* min-height: 100px; */
+            /* max-height: 370px; */
+            max-width: 600px;
+            width: 90vw;
+            /* height: 70vh; */
+        }
+       #tries{
+        text-align: center;
+       }
+
+       .pop-ups{
+        padding-top: 20vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+       }
+
+       #popup-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       }
+       #closePopup{
+        width: 70px;
+       }
+
+        #popup1 {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #025a4e;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ccc;
+    /* Center the content inside the popup */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Set a width to help with centering */
+    height: 100px; /* Set a height to help with centering */
+}
+
+
+        #popup1 h4 {
+            text-align: center;
+            margin: 0;
+            font-size: 18px;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
-    <div>Για το Χριστινάκιιιι μουυυυυυυυ</div>
-    <h4>Love youu ♡♡♡</h4>
-    <div>Είσαι το καλύτερο κοριτσάκι του κόσμουυ</div>
-    <img src="https://media3.giphy.com/media/h4tfyBWmLsdF6y6z53/giphy.gif?cid=6c09b952v82kmrot9lh09cpz09kle7vmesnunbhc5a93xcnc&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" draggable="false">
-    <img id="xristinaki" src="xristinaki.jpg" draggable="false">
-    <img src="https://i.pinimg.com/originals/92/40/9f/92409f75241dbe1c5962c01a3a72ccf0.gif" draggable="false">
+    <div id="popup1">
+        <h4 id="popup-message1"></h4>
+    </div>
+    <h1 id="tries" style="display: none;">Δεν έχεις άλλες προσπάθειες</h1>
+    <div class="pop-ups">
+    <div id="popup" style="display: none;">
+        <div id="popup-content">
+            <!-- <p>Ποια είσαι στα αλήθεια γκουνάντα.</p> -->
+             <img id="gkounanta" src="https://pbs.twimg.com/media/E1DXu_mXIAw7H6_.jpg" >
+            <button id="closePopup" onclick="closePopup()">X</button>
+        </div>
+    </div>
+    <div id="quiz-container">
+        <p>Πότε γνωριστήκαμε;</p>
+        <input type="text" id="answer" placeholder="Day/Month/Year" maxlength="10">
+        <button onclick="checkAnswer()">Υποβολή</button>
+    </div>
+</div>
+    <div id="content" style="display: none;">
+        <!-- Your original content goes here -->
+        <div>Για το Χριστινάκιιιι μουυυυυυυυ</div>
+        <h4>Love youu ♡♡♡</h4>
+        <div>Είσαι το καλύτερο κοριτσάκι του κόσμουυ</div>
+        <div id="like_button_container"></div>
+        <img src="https://media3.giphy.com/media/h4tfyBWmLsdF6y6z53/giphy.gif?cid=6c09b952v82kmrot9lh09cpz09kle7vmesnunbhc5a93xcnc&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" draggable="false">
+        <img id="xristinaki" src="xristinaki.jpg" draggable="false">
+        <img src="https://i.pinimg.com/originals/92/40/9f/92409f75241dbe1c5962c01a3a72ccf0.gif" draggable="false">
+    </div>
+    
+    <script>
+        var maxAttempts = 3;
+        var tries = parseInt(localStorage.getItem('tries')) || 0;
+
+        function updateTries() {
+            localStorage.setItem('tries', tries);
+            if (tries >= maxAttempts) {
+                document.getElementById('tries').style.display = 'block';
+                document.getElementById("quiz-container").style.display = "none";
+                showPopup(); 
+                document.getElementById('closePopup').style.display = 'none';
+            }
+        }
+
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.trim(); // Trim any extra spaces
+            
+            // Use a regular expression to match the date format "d/m/yyyy" or "dd/mm/yyyy"
+            var datePattern = /^(0?[1-9]|[12][0-9]|3[01])([\/\.-])(0?[1-9]|1[0-2])\2\d{4}$/;
+            
+            if (answer.match(datePattern) && (answer === "04/11/2023" || answer === "4/11/2023" || answer === "4.11.2023" || answer === "04.11.2023")) {
+                document.getElementById("quiz-container").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                tries++;
+                updateTries();
+                displayRemainingTries(); // Show the pop-up with remaining tries
+            }
+        }
+        document.getElementById('popup1').style.display = 'none';
+        function displayRemainingTries() {
+            var remainingTries = maxAttempts - tries;
+            if(remainingTries>0){
+            var popupMessage = "Μένουν " + remainingTries + " προσπάθειες.";
+            document.getElementById('popup-message1').textContent = popupMessage;
+            document.getElementById('popup1').style.display = 'block';
+
+            // Hide the popup after 5 seconds
+            setTimeout(function() {
+                document.getElementById('popup1').style.display = 'none';
+            }, 3000);
+        }}
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("quiz-container").style.display = "flex";
+        }
+
+        // Initialize tries display
+        if (tries >= maxAttempts) {
+            document.getElementById('tries').style.display = 'block';
+            document.getElementById("quiz-container").style.display = "none";
+            showPopup();
+            document.getElementById('closePopup').style.display = 'none';
+        }
+        </script>
 </body>
 </html>
