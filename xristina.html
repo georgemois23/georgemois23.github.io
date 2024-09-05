@@ -98,6 +98,8 @@
        }
 
        .pop-ups{
+        /* position: fixed; */
+        z-index: 100000;
         padding-top: 20vh;
         display: flex;
         flex-direction: row;
@@ -176,64 +178,88 @@
     </div>
     
     <script>
-        var maxAttempts = 3;
-        var tries = parseInt(localStorage.getItem('tries')) || 0;
+     var maxAttempts = 3;
+var tries = parseInt(sessionStorage.getItem('tries')) || 0;
+var quizCompleted = sessionStorage.getItem('quizCompleted') === 'true'; // Check if quiz is completed
+document.getElementById('popup1').style.display = 'none';
+// Initialize the display based on session state
+function initializeDisplay() {
+    if (quizCompleted) {
+        // If the quiz is completed, show the original content
+        
+        document.querySelector('.pop-ups').style.paddingTop=0;
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else if (tries >= maxAttempts) {
+        // If max attempts are reached, show the "No more attempts" message
+        document.getElementById('tries').style.display = 'block';
+        document.getElementById("quiz-container").style.display = "none";
+        showPopup();
+        document.getElementById('closePopup').style.display = 'none';
+    } else {
+        // If neither condition is met, show the quiz
+        document.getElementById("quiz-container").style.display = "flex";
+    }
+}
 
-        function updateTries() {
-            localStorage.setItem('tries', tries);
-            if (tries >= maxAttempts) {
-                document.getElementById('tries').style.display = 'block';
-                document.getElementById("quiz-container").style.display = "none";
-                showPopup(); 
-                document.getElementById('closePopup').style.display = 'none';
-            }
-        }
-
-        function checkAnswer() {
-            var answer = document.getElementById("answer").value.trim(); // Trim any extra spaces
-            
-            // Use a regular expression to match the date format "d/m/yyyy" or "dd/mm/yyyy"
-            var datePattern = /^(0?[1-9]|[12][0-9]|3[01])([\/\.-])(0?[1-9]|1[0-2])\2\d{4}$/;
-            
-            if (answer.match(datePattern) && (answer === "04/11/2023" || answer === "4/11/2023" || answer === "4.11.2023" || answer === "04.11.2023")) {
-                document.getElementById("quiz-container").style.display = "none";
-                document.getElementById("content").style.display = "block";
-            } else {
-                tries++;
-                updateTries();
-                displayRemainingTries(); // Show the pop-up with remaining tries
-            }
-        }
+// Update tries and handle the display when a wrong answer is given
+function updateTries() {
+    sessionStorage.setItem('tries', tries);
+    if (tries >= maxAttempts) {
         document.getElementById('popup1').style.display = 'none';
-        function displayRemainingTries() {
-            var remainingTries = maxAttempts - tries;
-            if(remainingTries>0){
-            var popupMessage = "Μένουν " + remainingTries + " προσπάθειες.";
-            document.getElementById('popup-message1').textContent = popupMessage;
-            document.getElementById('popup1').style.display = 'block';
+        document.getElementById('tries').style.display = 'block';
+        document.getElementById("quiz-container").style.display = "none";
+        showPopup(); 
+        document.getElementById('closePopup').style.display = 'none';
+    }
+}
 
-            // Hide the popup after 5 seconds
-            setTimeout(function() {
-                document.getElementById('popup1').style.display = 'none';
-            }, 3000);
-        }}
+function checkAnswer() {
+    var answer = document.getElementById("answer").value.trim(); // Trim any extra spaces
+    
+    // Use a regular expression to match the date format "d/m/yyyy" or "dd/mm/yyyy"
+    var datePattern = /^(0?[1-9]|[12][0-9]|3[01])([\/\.-])(0?[1-9]|1[0-2])\2\d{4}$/;
+    
+    if (answer.match(datePattern) && (answer === "04/11/2023" || answer === "4/11/2023" || answer === "4.11.2023" || answer === "04.11.2023")) {
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        sessionStorage.setItem('quizCompleted', 'true'); // Set the flag to true when the quiz is completed
+        document.querySelector('.pop-ups').style.paddingTop=0;
+    } else {
+        tries++;
+        updateTries();
+        showPopup();
+        displayRemainingTries(); // Show the pop-up with remaining tries
+    }
+}
 
-        function showPopup() {
-            document.getElementById("popup").style.display = "flex";
-        }
+function displayRemainingTries() {
+    var remainingTries = maxAttempts - tries;
+    if (remainingTries > 0) {
+        var popupMessage = "Μένουν " + remainingTries + " προσπάθειες.";
+        document.getElementById('popup-message1').textContent = popupMessage;
+        document.getElementById('popup1').style.display = 'block';
 
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-            document.getElementById("quiz-container").style.display = "flex";
-        }
+        // Hide the popup after 3 seconds
+        setTimeout(function() {
+            document.getElementById('popup1').style.display = 'none';
+        }, 3000);
+    }
+}
 
-        // Initialize tries display
-        if (tries >= maxAttempts) {
-            document.getElementById('tries').style.display = 'block';
-            document.getElementById("quiz-container").style.display = "none";
-            showPopup();
-            document.getElementById('closePopup').style.display = 'none';
-        }
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("quiz-container").style.display = "none";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("quiz-container").style.display = "flex";
+}
+
+// Run the initialization function on page load
+initializeDisplay();
+
         </script>
 </body>
 </html>
