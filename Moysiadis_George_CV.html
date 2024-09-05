@@ -49,7 +49,9 @@
     color: var(--backg);;
 }
 
+
 .x:hover{
+    border: 2.3px solid black;
     border-end-end-radius:1rem;
     border-start-start-radius: .8rem;
 }
@@ -378,6 +380,10 @@ a{
     loadDOM(); /* maybe put [display: none] on body as default and remove it here */
    }
 }
+
+document.querySelector('.logo').addEventListener('click',function(){
+  window.location.href = "/#"+'home';
+});
     </script>
     <script src="type.js"></script>
 </body>
