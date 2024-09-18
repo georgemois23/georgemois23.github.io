@@ -71,7 +71,7 @@ embed{
 body {
     font-family: Arial, sans-serif;
     color: var(--basic-txt);
-    display: none;
+    /* display: none; */
 }
 
 .section-title {
@@ -198,10 +198,28 @@ a{
         ::-webkit-scrollbar-thumb {
   border-radius: 100px;
 }
-      
+      #hiden, #hiden1{
+        font-family: "Sedgwick Ave Display", cursive;
+        margin-top: 1rem;
+        text-align: center;
+        color: #025a4e;
+        margin-inline: auto;
+      }
+
+      #hiden1{
+        margin-bottom: 1rem;
+        /* border: 2px solid #025a4e; */
+        /* border-radius: 10px; */
+        width: fit-content;
+        
+      }
  
 </style>
 <body>
+        <h1 id="hiden"></h1>
+        <h5 id="hiden1"></h5>
+    
+    <div class="body1">
     <div class="wrapper">
         <div class="content">
           <ul class="menu">
@@ -232,9 +250,9 @@ a{
     <div class="logo">Moysiadis George</div>
         <div class="logo1">Moysiadis George</div>
     <div class="logo2">
-        <a href="/#home">Home</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#contact">Contact</a>
+        <a href="/">Back To Home Page</a>
+        <!-- <a href="/#projects">Projects</a> -->
+        <!-- <a href="/#contact">Contact</a> -->
     </div>
     <div class="x"><a id="downloadd" href="/Moysiadis_George.pdf" target="_blank" download="Moysiadis_George_CV">Download my CV</a></div>
     <div class="under-nav"> 
@@ -283,6 +301,10 @@ a{
             <li class="list-item">Actively learning and applying new skills to enhance proficiency in web development languages.</li>
         </ul>
     <br>
+        <p class="course-title">Course - React Basics <span class="date">June 2024 - July 2024</span></p>
+        <p class="location"><a href="https://www.coursera.org/learn/react-basics/">Meta</a></p>
+        <li class="list-item">Gained foundational knowledge of building web applications using React, including component creation, state management, and props handling.</li>
+        <br>
         <p class="course-title">High School <span class="date">Sep 2019 - Jun 2022</span></p>
         <p class="location">Thessaloniki, Greece</p>
         <p class="gpa">GPA: 98.5</p>
@@ -301,7 +323,7 @@ a{
             <li class="list-item">Continuously refining and expanding portfolio to demonstrate ongoing skill development in web development.</li>
         </ul>
     <br>
-        <p class="job-title">Social Media and Scheduling Coordinator <span class="date">Jul 2022 - Present</span></p>
+        <p class="job-title">Social Media and Scheduling Coordinator  <span class="date">Jul 2022 - Present</span></p>
         <p class="location">Part-time, Santorini, Greece</p>
         <ul>
             <li class="list-item">Email Management: Answered and responded to client emails and appointment requests promptly and professionally.</li>
@@ -319,8 +341,9 @@ a{
     </div>
     <!-- <embed src="/Moysiadis_George.pdf" width="800px" height="2100px" /> -->
     
-
-
+</div>
+</div>
+    
 
     
     <script>const contextMenu = document.querySelector(".wrapper");
@@ -367,16 +390,29 @@ a{
 
         window.onload = () => {
    if (window.innerWidth <= 756) {
-    document.querySelector('body').style.display='none';
-    alert('CV is downloading!');
-    document.getElementById('downloadd').click();
+    document.getElementById('hiden').innerHTML='THE CV IS DOWNLOADING';
+    document.querySelector('.body1').style.display='none';
+    
+    // alert('CV is downloading!');
     setTimeout(() => {
-        window.open('/','_self');
+        // document.getElementById('downloadd').click();
+        console.log('Downloading');
        
-    }, "100");
+    }, "1000");
+    setTimeout(() => {
+        document.getElementById('hiden1').innerHTML='YOU WILL AUTOMATICALLY GO BACK TO HOME PAGE...';
+       
+    }, "3000");
+    setTimeout(() => {
+        console.log('Redirecting to home page');
+        
+        
+        // window.open('/','_self');
+       
+    }, "5000");
     
    } else {
-    document.querySelector('body').style.display='block';
+    document.querySelector('.body1').style.display='block';
     loadDOM(); /* maybe put [display: none] on body as default and remove it here */
    }
 }
