@@ -178,6 +178,7 @@
     </div>
     
     <script>
+        window.location.replace("/404.html");
      var maxAttempts = 3;
 var tries = parseInt(sessionStorage.getItem('tries')) || 0;
 var quizCompleted = sessionStorage.getItem('quizCompleted') === 'true'; // Check if quiz is completed
@@ -188,8 +189,10 @@ function initializeDisplay() {
         // If the quiz is completed, show the original content
         
         document.querySelector('.pop-ups').style.paddingTop=0;
-        document.getElementById("quiz-container").style.display = "none";
-        document.getElementById("content").style.display = "block";
+        // document.getElementById("quiz-container").style.display = "none";
+       document.getElementById("content").style.display = "none";
+      //window.location.reload;
+        
     } else if (tries >= maxAttempts) {
         // If max attempts are reached, show the "No more attempts" message
         document.getElementById('tries').style.display = 'block';
@@ -225,6 +228,7 @@ function checkAnswer() {
         document.getElementById("content").style.display = "block";
         sessionStorage.setItem('quizCompleted', 'true'); // Set the flag to true when the quiz is completed
         document.querySelector('.pop-ups').style.paddingTop=0;
+        
     } else {
         tries++;
         updateTries();
