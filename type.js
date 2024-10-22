@@ -97,6 +97,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+document.querySelector('.logo').addEventListener('click',function(){
+  window.location.href = "#"+'home';
+});
 document.querySelector('.logo').addEventListener('mouseover',function(){
   document.getElementById('hid').style.display='block';
 });
@@ -112,11 +115,13 @@ document.getElementById('hid').addEventListener('mouseout',function(){
 document.querySelector('.x').addEventListener('mouseover',function(){
   document.querySelector('.x').innerHTML='dont leave yet :(';
   document.querySelector('.x').style.fontWeight='900';
+  document.querySelector('.y').style.visibility='hidden';
 
 });
 document.querySelector('.x').addEventListener('mouseout',function(){
   document.querySelector('.x').innerHTML='X';
   document.querySelector('.x').style.fontWeight='500';
+  document.querySelector('.y').style.visibility='visible';
 });
 
 document.querySelector('.cv').addEventListener('mouseover', function() {
@@ -207,7 +212,9 @@ function handleScroll() {
 
 // Add scroll event listener to trigger handleScroll function
 window.addEventListener('scroll', handleScroll);
-
+document.querySelector('.arrow').addEventListener('click',function(){
+  
+})
 // Function to toggle expandable button
 function toggleExpand() {
   const button = document.querySelector('.expandable-button');
@@ -315,7 +322,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('linkd').addEventListener('click',function(){
   open("https://www.linkedin.com/in/george-moysiadis/", "_blank");
-  document.getElementById('gith').style.color='red';
+})
+document.getElementById('gith').addEventListener('click',function(){
+  open("https://www.github.com/georgemois23", "_blank");
+})
+document.getElementById('linkd').addEventListener('click',function(){
+  open("https://www.linkedin.com/in/george-moysiadis/", "_blank");
 })
 
 document.addEventListener('DOMContentLoaded', function() {
