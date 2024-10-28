@@ -66,24 +66,66 @@
         text-decoration: underline;
         transition: text-decoration 3s ease-in, font-weight 3s ease-in; 
         font-weight: bolder;}
+
+        .mainn{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-top: 10vh;
+    
+  }
         @media all and (max-width:620px) {
-.fff{ font-size: 130px;
-   }}
+.fff{ font-size: 130px;}
+   
+.mainn{
+    margin-top: 20vh;
+}}
         @media all and (max-width:300px) {
 .fff{ font-size: 70px;
    }
+   .mainn{
+    margin-top: 30vh;
+}
   }
         @media all and (max-width:160px) {
 .fff{ font-size: 40px;
    }
   }
+  
+ 
 </style>
 <body>
-    <h1 class="fff">404</h1>
+    <div class="mainn">
+        <div id="type">
+    <h1 class="fff" id="typewriter"></h1></div>
+     <!-- <img src="/Animation.gif" alt=""> -->
     <div class="text">
     <div>The link you clicked may be broken or the page may have burst.</div>
     <div class="ddiv">Visit the <a href="/" target="_parent">home</a> page</div></div>
-   
+</div>
+<script>
+   var i = 0;
+var txt = '404'; /* The text */
+var speed = 500; /* The speed/duration of the effect in milliseconds */
 
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typewriter").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed+100);
+    
+  } else {
+    setTimeout(function() {
+      i = 0; // Reset index
+      document.getElementById("typewriter").innerHTML = ''; // Clear text
+      typeWriter();
+    }, 100); // Wait before restarting
+     // Start typing again
+  }
+}
+
+typeWriter();
+</script>
 </body>
 </html>

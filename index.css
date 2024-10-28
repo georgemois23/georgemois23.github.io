@@ -5,6 +5,9 @@ html, body {
   overflow-x: hidden;
 }
 
+.spacee{
+  margin-top: 1rem;
+}
 .cur-project-a {
   color: var(--txt);
   background-color: var(--backg);
@@ -661,8 +664,8 @@ hr {
 
   .course{
     margin: 0 4rem;
-    font-family: Neue Regrade;
-    font-weight: 800;
+    /* font-family: Neue Regrade; */
+    /* font-weight: 800; */
   }
   #clr{
     position: fixed;
@@ -1182,8 +1185,8 @@ header{
 ::-webkit-scrollbar-track {
   background: black;
   /* background: red; */
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   border-left: 2px solid black;
   border-top: 2px solid black;
 }
@@ -1191,7 +1194,9 @@ header{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border: 1px solid black;
-    border-radius: 100px;
+    border-radius: 120px;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
   background: var(--txt);
 }
 
