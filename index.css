@@ -8,7 +8,7 @@ html, body {
 .spacee{
   margin-top: 1rem;
 }
-.cur-project-a {
+.cur_projects {
   color: var(--txt);
   background-color: var(--backg);
   text-decoration: none;
@@ -16,9 +16,10 @@ html, body {
   border-radius: 10px;
   padding: 3px;
 }
-.cur-project-a :hover{
+.cur_projects :hover{
   background-color: var(--txt);
   color: var(--backg);
+  display: none;
 }
 
 .cur-project{
@@ -260,6 +261,7 @@ color: var(--txt);
   /* margin-inline: auto; */
   
   background-color:var(--backg);
+  
   /* padding-right: 20px; */
 }
 
@@ -642,7 +644,9 @@ hr {
     justify-content: center;
     gap: 4rem;
     background-color: var(--backg);
-
+    opacity: 0.965;
+    
+    
     color: var(--txt);
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 500;
@@ -657,9 +661,10 @@ hr {
   user-select: none;
   width: 100vw;
   /* border-bottom: 2px solid var(--txt); */
-  border-radius: 30rem;
+  /* border-radius: 30rem; */
+  border-bottom-right-radius: 0px;
     z-index: 100000;
-  
+    /* border-bottom: 0.5px solid var(--txt); */
   }
 
   .course{
