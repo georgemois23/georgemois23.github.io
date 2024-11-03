@@ -19,7 +19,6 @@ html, body {
 .cur_projects :hover{
   background-color: var(--txt);
   color: var(--backg);
-  display: none;
 }
 
 .cur-project{
