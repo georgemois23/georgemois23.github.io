@@ -216,7 +216,7 @@ document.querySelector('.arrow').addEventListener('click',function(){
   
 })
 // Function to toggle expandable button
-function toggleExpand() {
+function toggleExpand(event) {
   const button = document.querySelector('.expandable-button');
   button.classList.toggle('expanded');
   document.getElementById('arrow').innerHTML="←";
@@ -301,6 +301,26 @@ button.addEventListener('click', function(evt) {
   initializeTyped();
 }, false);
 
+let devtoolsOpen = false;
+
+const element = new Image();
+Object.defineProperty(element, 'id', {
+  get: function () {
+    devtoolsOpen = true;
+    throw new Error("DevTools detected");
+  }
+});
+
+console.log('%c', element); // triggers the getter when DevTools is open
+
+setInterval(() => {
+  devtoolsOpen = false;
+  console.log('%c', element);
+  if (devtoolsOpen) {
+    console.alert("Developer tools are open!");
+    // You can also redirect, freeze UI, etc. (not recommended)
+  }
+}, 1000);
 
 
 document.addEventListener('DOMContentLoaded', function() {
