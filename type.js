@@ -270,7 +270,7 @@ function changecolor() {
 }
 // Open CV
 document.getElementById('cvsmall').addEventListener('click', function() {
-  window.open('/Moysiadis_George.pdf', '_blank');
+  // window.open('/Moysiadis_George.pdf', '_blank');
 });
 
 const button = document.getElementById('visitt');

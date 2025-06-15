@@ -215,11 +215,21 @@ a{
         width: fit-content;
         
       }
+      .hid{
+         display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100vh;  
+    flex-direction: column; 
+
+      }
  
 </style>
 <body>
+    <div class="hid">
         <h1 id="hiden"></h1>
         <h5 id="hiden1"></h5>
+        </div>
     
     <div class="body1">
     <div class="wrapper">
@@ -430,7 +440,7 @@ management.</p>
     
     // alert('CV is downloading!');
     setTimeout(() => {
-        // document.getElementById('downloadd').click();
+        document.getElementById('downloadd').click();
         console.log('Downloading');
        
     }, "1000");
@@ -442,9 +452,9 @@ management.</p>
         console.log('Redirecting to home page');
         
         
-        // window.open('/','_self');
+        window.open('/','_self');
        
-    }, "5000");
+    }, "10000");
     
    } else {
     document.querySelector('.body1').style.display='block';
