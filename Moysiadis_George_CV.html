@@ -215,7 +215,10 @@ a{
         width: fit-content;
         
       }
+
+    @media (max-width: 756px) {
       .hid{
+        
          display: flex;
   justify-content: center; 
   align-items: center;   
@@ -223,6 +226,7 @@ a{
     flex-direction: column; 
 
       }
+    }
  
 </style>
 <body>
@@ -454,7 +458,7 @@ management.</p>
         
         window.open('/','_self');
        
-    }, "10000");
+    }, "8000");
     
    } else {
     document.querySelector('.body1').style.display='block';
