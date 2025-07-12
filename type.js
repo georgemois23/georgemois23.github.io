@@ -284,7 +284,7 @@ const mainContent = document.getElementById('mainContent');
   // document.querySelector('html').classList.toggle('prevent-scrolling');
   // mainContent.style.display = 'none';
 // } else {
-  bodyy.style.visibility = 'hidden';
+  // bodyy.style.visibility = 'hidden';
   document.querySelector('.underconstruction').style = 'filter: none';
   document.querySelector('html').classList.remove('prevent-scrolling');
   mainContent.style.display = 'block';
