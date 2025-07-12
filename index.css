@@ -397,8 +397,9 @@ hr {
   .navigation a{
     /* flex: 1 1 100%; */
   }
+
   .under-nav{
-    padding: 0 3rem;
+    padding: 0 2rem;
     min-height: 100vh;
     margin-top: 0;
   }
@@ -1219,7 +1220,8 @@ header{
     font-family: "Advent Pro", sans-serif;
 }
 
-.name{color: var(--txt);
+.name{
+  color: var(--txt);
   font-family: "Syne", sans-serif;}
 
 
