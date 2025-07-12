@@ -279,18 +279,17 @@ const hasVisited = sessionStorage.getItem('hasVisited');
 const mainContent = document.getElementById('mainContent');
 
 // Check if the user has already visited the site
-if (!hasVisited) {
-  bodyy.style.visibility = 'visible';
-  document.querySelector('html').classList.toggle('prevent-scrolling');
-  mainContent.style.display = 'none';
-} else {
+// if (!hasVisited) {
+  // bodyy.style.visibility = 'visible';
+  // document.querySelector('html').classList.toggle('prevent-scrolling');
+  // mainContent.style.display = 'none';
+// } else {
   bodyy.style.visibility = 'hidden';
   document.querySelector('.underconstruction').style = 'filter: none';
-  // document.querySelector('.navigation').style.visibility = 'visible';
   document.querySelector('html').classList.remove('prevent-scrolling');
   mainContent.style.display = 'block';
   initializeTyped();
-}
+// }
 
 button.addEventListener('click', function(evt) {
   sessionStorage.setItem('hasVisited', true);
