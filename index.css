@@ -9,6 +9,10 @@ html, body {
   margin-top: 1rem;
 }
 .cur_projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: var(--txt);
   background-color: var(--backg);
   text-decoration: none;
@@ -22,12 +26,16 @@ html, body {
 }
 
 .cur-project{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border: 2px var(--txt) solid;
-  width: 90%;
-  min-width: 200px;
+  width: 85vw;
+  min-width: 300px;
   max-width: 700px;
   margin-inline: auto;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
@@ -645,6 +653,8 @@ hr {
     gap: 4rem;
     background-color: var(--backg);
     opacity: 0.965;
+    backdrop-filter: blur(90px);
+    padding: 0 20px;
     
     
     color: var(--txt);
@@ -737,20 +747,33 @@ hr {
 
 
 @media all and (min-width:630px) {
-  iframe {
+  #mockUp {
+    display: block;
     width: 100%;
-    height: 500px; /* Adjust height as needed */
     border: none; /* Remove border */
     border-radius: 10px;
     margin-top: 1rem;
     margin-bottom: 1rem
   }
+
+  #mockUpSmall {
+    display: none;
+  }
 }
 
 @media all and (max-width:630px) {
-iframe{
-  display: none;
-}
+#mockUpSmall {
+    display: block;
+    width: 90%;
+    border: none; /* Remove border */
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem
+  }
+
+  #mockUp {
+    display: none;
+  }
 }
 
 @media all and (max-width:430px) {

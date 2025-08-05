@@ -256,6 +256,7 @@ function changecolor() {
       document.getElementById('imgg1').src = '/other-pages/linkedin_.svg';
       document.getElementById('menu').src = '/other-pages/menu.svg';
       document.getElementById('menu').src = '/other-pages/minimize.svg';
+      document.getElementById('imgg2').src = '/other-pages/mail_.svg';
       localStorage.setItem('colorScheme', 'dark');
   } else {
       document.documentElement.style.setProperty('--txt', '#025a4e');
@@ -265,6 +266,7 @@ function changecolor() {
       document.getElementById('imgg1').src = '/other-pages/linkedin.svg';
       document.getElementById('menu').src = '/other-pages/menu_.svg';
       document.getElementById('menu').src = '/other-pages/minimize_.svg';
+      document.getElementById('imgg2').src = '/other-pages/mail.svg';
       localStorage.setItem('colorScheme', 'light');
   }
 }
@@ -330,12 +332,14 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('clr').querySelector('img').src = '/other-pages/lightbulb.svg';
       document.getElementById('imgg').src = '/other-pages/github_.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin_.svg';
+      document.getElementById('imgg2').src = '/other-pages/mail_.svg';
   } else if (colorScheme === 'light') {
       document.documentElement.style.setProperty('--txt', '#025a4e');
       document.documentElement.style.setProperty('--backg', '#ede7de');
       document.getElementById('clr').querySelector('img').src = '/other-pages/lightbulb_.svg';
       document.getElementById('imgg').src = '/other-pages/github.svg';
       document.getElementById('imgg1').src = '/other-pages/linkedin.svg';
+      document.getElementById('imgg2').src = '/other-pages/mail.svg';
   }
 });
 
