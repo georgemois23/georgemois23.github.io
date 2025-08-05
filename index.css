@@ -9,10 +9,6 @@ html, body {
   margin-top: 1rem;
 }
 .cur_projects {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   color: var(--txt);
   background-color: var(--backg);
   text-decoration: none;
@@ -944,6 +940,10 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   width: 10px;
 }
 #projects{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 10rem;
   scroll-margin-top: 120px; 
   margin-bottom: 35rem;
