@@ -29,12 +29,13 @@ html, body {
   border: 2px var(--txt) solid;
   width: 85vw;
   min-width: 300px;
-  max-width: 700px;
+  max-width: 800px;
   margin-inline: auto;
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
+
 
 
 
@@ -721,7 +722,7 @@ hr {
     
   }
   #projects{
-    margin-top: 3rem;
+    margin-top: 5rem;
     scroll-margin-top: 5px;
     margin-bottom: 20rem;
   }
@@ -743,22 +744,22 @@ hr {
 
 
 @media all and (min-width:630px) {
-  #mockUp {
+  .mockUp {
     display: block;
-    width: 100%;
+    width: 80%;
     border: none; /* Remove border */
     border-radius: 10px;
     margin-top: 1rem;
     margin-bottom: 1rem
   }
 
-  #mockUpSmall {
+  .mockUpSmall {
     display: none;
   }
 }
 
 @media all and (max-width:630px) {
-#mockUpSmall {
+.mockUpSmall {
     display: block;
     width: 90%;
     border: none; /* Remove border */
@@ -767,8 +768,14 @@ hr {
     margin-bottom: 1rem
   }
 
-  #mockUp {
+  .mockUp {
     display: none;
+  }
+
+  #projects{
+    margin-top: 20vh;
+    scroll-margin-top: 50px;
+    margin-bottom: 10rem;
   }
 }
 
@@ -944,12 +951,12 @@ a[href="https://www.linkedin.com/in/george-moysiadis/"]  {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
-  scroll-margin-top: 120px; 
-  margin-bottom: 35rem;
+  /* margin-top: 50vh; */
+  /* scroll-margin-top: 120px;  */
+  /* margin-bottom: 35rem; */
   /* width: 100vw; */
   text-align: center;
-  height: 500px;
+  /* height: 500px; */
   /* border: 2px solid black; */
 }
 .first-section-content{
