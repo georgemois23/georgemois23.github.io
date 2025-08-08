@@ -266,7 +266,7 @@ a{
     <div class="logo">Moysiadis George</div>
         <div class="logo1">Moysiadis George</div>
     <div class="logo2">
-        <a href="/">Back To Home Page</a>
+        <a id="backToHome" href="/" download="Moysiadis_George_CV">Back To Home Page</a>
         <!-- <a href="/#projects">Projects</a> -->
         <!-- <a href="/#contact">Contact</a> -->
     </div>
@@ -458,6 +458,10 @@ management.</p>
 
 document.querySelector('.logo').addEventListener('click',function(){
   window.location.href = "/#"+'home';
+});
+
+document.getElementById('backToHome').addEventListener('click',function(){
+    window.location.href='/';
 });
     </script>
     <script src="type.js"></script>

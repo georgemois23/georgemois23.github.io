@@ -107,7 +107,9 @@ document.getElementById('hid').addEventListener('mouseover',function(){
   document.getElementById('hid').style.display='block';
 });
 document.querySelector('.logo').addEventListener('mouseout',function(){
-  document.getElementById('hid').style.display='none';
+  setTimeout(function() {
+    document.getElementById('hid').style.display='none';
+  }, 4000);
 });
 document.getElementById('hid').addEventListener('mouseout',function(){
   document.getElementById('hid').style.display='none';
@@ -365,6 +367,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.addEventListener("contextmenu", e => {
             e.preventDefault();
+
+    //           if (!contextMenu.contains(e.target)) {
+    //     contextMenu.style.visibility = "hidden";
+    // }
+
             let x = e.pageX, y = e.pageY,
                 winWidth = window.innerWidth,
                 winHeight = window.innerHeight,

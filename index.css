@@ -412,7 +412,7 @@ hr {
   
   #contact {
     margin-top: 16rem;
-    scroll-margin-top: 85px; 
+    scroll-margin-top: 95px; 
   }
   .footer{
     /* margin: 0 3rem; */
@@ -499,6 +499,7 @@ hr {
 
  #home{
   margin-top: 1rem;
+  scroll-margin-top: 30px; 
  }
 
  #viewmycv1{
@@ -723,7 +724,7 @@ hr {
   }
   #projects{
     margin-top: 5rem;
-    scroll-margin-top: 5px;
+    scroll-margin-top: 95px;
     margin-bottom: 20rem;
   }
   #home{
@@ -805,7 +806,7 @@ hr {
 @media all and (max-width:390px) {
   #contact {
     margin-top: 6rem;
-    scroll-margin-top: 45px; 
+    /* scroll-margin-top: 45px;  */
   }
   }
 
@@ -841,7 +842,7 @@ hr {
 
   #contact {
     margin-top: 6rem;
-    scroll-margin-top: 45px; 
+    /* scroll-margin-top: 45px;  */
   }
   }
 
