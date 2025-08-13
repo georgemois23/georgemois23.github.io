@@ -271,8 +271,10 @@ color: var(--txt);
 
 
 .hiddencourse {
-  display: none;
+  /* display: none; */
   opacity: 0;
+  cursor:default ;
+  user-select: none;
 }
 
 .fade-incourse{
@@ -522,10 +524,12 @@ hr {
     /* width:60%; */
     line-height: normal;
     /* justify-content: flex-start; */
-    padding-top: 0.1rem;
+    padding-top: 0.3rem;
     position: fixed;
     user-select: none;
-    background-color: var(--backg);
+    background: color-mix(in srgb, var(--backg) 60%, transparent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
     width: 100vw;
     top: 0rem;
     margin-top: 0;
@@ -534,6 +538,9 @@ hr {
   
   }
   .logo{
+    display: none;
+  }
+  .logo2{
     display: none;
   }
 
@@ -630,6 +637,7 @@ hr {
   .logo{
     z-index: 10000000;
     display: block;
+    
   }
   
   .logo1{
@@ -649,9 +657,9 @@ hr {
     display: flex;
     justify-content: center;
     gap: 4rem;
-    background-color: var(--backg);
-    opacity: 0.965;
-    backdrop-filter: blur(90px);
+    background: color-mix(in srgb, var(--backg) 50%, transparent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
     padding: 0 20px;
     
     
@@ -677,6 +685,7 @@ hr {
 
   .course{
     margin: 0 4rem;
+    min-height: 100px;
     /* font-family: Neue Regrade; */
     /* font-weight: 800; */
   }
@@ -725,7 +734,7 @@ hr {
   #projects{
     margin-top: 5rem;
     scroll-margin-top: 95px;
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
   }
   #home{
     margin-top: 6rem;

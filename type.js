@@ -368,6 +368,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener("contextmenu", e => {
             e.preventDefault();
 
+            
+
     //           if (!contextMenu.contains(e.target)) {
     //     contextMenu.style.visibility = "hidden";
     // }
