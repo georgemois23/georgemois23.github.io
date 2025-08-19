@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
  
+document.getElementById('cvbig').addEventListener('click', function () {
+  window.open('/Moysiadis_George_CV.html',"_self");
+  });
+document.getElementById('cvsmall').addEventListener('click', function () {
+  window.open('/Moysiadis_George_CV.html',"_self");
+  });
+
 document.getElementById('hid').addEventListener('click',function(){
   document.getElementById('hid').style.display='none';
  
