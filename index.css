@@ -800,6 +800,9 @@ hr {
     align-items: center;
     gap: 25px;
     justify-content: center;
+    background: color-mix(in srgb, var(--backg) 90%, transparent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   }
   .navigation a{
     /* font-size: 18px; */
