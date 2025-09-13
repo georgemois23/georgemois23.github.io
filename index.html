@@ -56,10 +56,78 @@
       'GRAD' 0,
       'opsz' 24
     }
+    .wrapper{
+  visibility: hidden;
+  position: absolute;
+  width: 200px;
+  border-radius: 10px;
+  background: var(--txt);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  color: var(--backg);
+  z-index: 200000;
+}
+.wrapper .menu{ padding: 10px 12px; }
+.content .item{ list-style:none; font-size:22px; height:50px; display:flex; align-items:center; border-radius:5px; padding:0 10px; cursor:pointer; }
+.content .item:hover{ background: var(--backg); color: var(--txt); }
     </style>
+    <script>
+  (function(){
+    const contextMenu = document.querySelector(".wrapper");
+    if (!contextMenu) return;
+
+    // optional: remove inline hidden if present
+    contextMenu.style.visibility = "hidden";
+    const margin = 15;
+
+    window.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+
+      const winWidth = window.innerWidth;
+      const winHeight = window.innerHeight;
+      const cmWidth = contextMenu.offsetWidth || 200; // fallback
+      const cmHeight = contextMenu.offsetHeight || 200;
+
+      let x = e.pageX;
+      let y = e.pageY;
+
+      // keep inside viewport with a small margin
+      if (x + cmWidth > winWidth + window.scrollX - margin) {
+        x = winWidth + window.scrollX - cmWidth - margin;
+      }
+      if (y + cmHeight > winHeight + window.scrollY - margin) {
+        y = winHeight + window.scrollY - cmHeight - margin;
+      }
+
+      contextMenu.style.left = `${x}px`;
+      contextMenu.style.top = `${y}px`;
+      contextMenu.style.position = "absolute";
+      contextMenu.style.visibility = "visible";
+      contextMenu.style.zIndex = "200000";
+    });
+
+    // hide on click/scroll/resize
+    const hide = () => (contextMenu.style.visibility = "hidden");
+    document.addEventListener("click", hide);
+    window.addEventListener("scroll", hide);
+    window.addEventListener("resize", hide);
+
+    // (optional) wire up your item clicks
+    const byId = (id) => document.getElementById(id);
+    const openBlank = (url) => window.open(url, "_blank");
+
+    const lnkd = byId("lnkd");
+    if (lnkd) lnkd.addEventListener("click", () => openBlank("https://www.linkedin.com/in/george-moysiadis/"));
+
+    const githubb = byId("githubb");
+    if (githubb) githubb.addEventListener("click", () => openBlank("https://www.github.com/georgemois23"));
+
+    const viewcv = byId("viewmycv1") || byId("viewmycv");
+    if (viewcv) viewcv.addEventListener("click", () => openBlank("/Moysiadis_George.pdf"));
+  })();
+</script>
 <body>
   
-    <div class="wrapper">
+    <div class="wrapper" style="visibility:hidden;">
         <div class="content">
           <ul class="menu">
             <li class="item" id="hover-container">
@@ -145,15 +213,16 @@
         <div class="name"> 
 
         <br>
-        <div><span class="auto-type2" style="display:none;">Web Developer | React Enthusiast | Open to work</span><span class="typed-cursor" aria-hidden="true"></span></div>
+        <span style="display: none;">Web Developer | React Enthusiast | Open to work | moysiadis developer | </span>
+        <div><span class="auto-type2" ></span><span class="typed-cursor" aria-hidden="true"></span></div>
         <span class="auto-type3"></span><span class="typed-cursor" aria-hidden="true"></span><span class="auto-type4"></span><span class="typed-cursor" aria-hidden="true"></span>
         <!-- <div>My name is George Moysiadis, I am from Greece and I am a student of Computer Science.</div> -->
         <!-- <div>My name is George Moysiadis, I come from Greece and I am a student of Computer Science</div>  -->
          <br><br>
          <div class="course">
-         <div>I have completed a comprehensive course in web development, where I honed my skills in HTML, CSS, and JavaScript. This foundational knowledge has empowered me to bring creative ideas to life on the web. Currently, I'm expanding my expertise by diving into various frameworks, staying updated with the latest trends and technologies in the industry.</div>
+         <div>I am currently a fourth-year Computer Science student at the University of Macedonia. I started my journey with HTML, CSS, and JavaScript, and have since expanded my skills into modern technologies like React and TypeScript, which I actively use in my projects.</div>
          <br>
-         <div>One of my ongoing projects is constantly improving this personal website. As I work on enhancing it, I’m continuously learning new technologies and discovering more about web development. This process fuels my passion for the field even more.</div>
+         <div>Right now, I’m focused on applying my knowledge through personal projects and my internship, where I continue to grow as a web developer. I’m passionate about staying up to date with the latest technologies and constantly improving my craft—whether by enhancing my personal website or experimenting with new tools and frameworks.</div>
         </div>
             <!-- <button id="clr"><img src="/other-pages/lightbulb_.svg"></button> -->
     
